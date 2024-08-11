@@ -1,5 +1,5 @@
 <template>
-  <v-card image="@/assets/img/company-bac.jpg">
+  <v-card image="@/assets/img/Company-bac.jpg">
     <v-card
       class="py-16 text-white"
       style="
