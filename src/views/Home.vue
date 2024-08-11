@@ -13,7 +13,7 @@
 </template>
 
 <script setup>
-import Introdacution from "@/components/introdacution.vue";
+import Introdacution from "@/components/Introdacution.vue";
 import About from "@/components/About.vue";
 import Company from "@/components/Company.vue";
 import Teame from "@/components/Teame.vue";
