@@ -1,19 +1,23 @@
 <template>
   <v-sheet color="transparent">
     <Introdacution />
-    <About id="About" />
+
+    <AboutCompany />
+
     <Company />
     <Teame />
     <Projects id="Projects" />
     <Application />
-    <AboutCompany />
+
+    <About id="About" />
+
     <Partner />
     <Connect id="CotactUs" />
   </v-sheet>
 </template>
 
 <script setup>
-import Introdacution from "@/components/introdacution.vue";
+import Introdacution from "@/components/Introdacution.vue";
 import About from "@/components/About.vue";
 import Company from "@/components/Company.vue";
 import Teame from "@/components/Teame.vue";

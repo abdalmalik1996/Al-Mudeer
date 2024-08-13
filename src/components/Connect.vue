@@ -2,9 +2,9 @@
   <v-card
     image="@/assets/img/Connect-bac.png"
     min-height="100vh"
-    class="text-white"
+    class="text-white rounded-0"
   >
-    <v-card class="h-100 w-100 text-white py-15" color="#07050fe5">
+    <v-card class="h-100 w-100 text-white py-15 rounded-0" color="#07050fe5">
       <v-row class="ma-0" justify="center">
         <v-col cols="12" md="10">
           <v-card-title class="text-center">
@@ -57,27 +57,34 @@
                   icon="mdi-facebook"
                   class="text-h6 rounded-lg"
                   size="56"
+                  href="https://www.facebook.com/AlMudeerOAM"
+                  target="_blank"
                 ></v-btn>
+
                 <v-btn
                   style="background-color: rgba(255, 255, 255, 0.1)"
                   icon="mdi-instagram"
                   class="text-h6 rounded-lg"
                   size="56"
+                  href="https://www.instagram.com/almudeeroam/"
+                  target="_blank"
                 ></v-btn>
                 <v-btn
                   style="background-color: rgba(255, 255, 255, 0.1)"
-                  icon="mdi-whatsapp"
+                  icon="mdi-linkedin"
                   class="text-h6 rounded-lg"
                   size="56"
+                  href="https://www.linkedin.com/company/al-mudeer-owners-association-management-services"
+                  target="_blank"
                 ></v-btn>
               </v-card-actions>
-              <v-card-text class="pl-0">
+              <!-- <v-card-text class="pl-0">
                 <p class="text-h5">
                   Lorem ipsum dolor sit amet consectetur. Enim massa velit id
                   volutpat fermentum sed praesent. Orci a faucibus velit nisi
                   felis placerat quam diam diam.
                 </p>
-              </v-card-text>
+              </v-card-text> -->
             </v-col>
             <v-col cols="12" md="5">
               <v-card
@@ -123,22 +130,22 @@
 const items = [
   {
     title: "You can email us here",
-    text: "example@gmail.com",
+    text: "info@almudeer.ae",
     type: "email",
   },
   {
     title: "Or just call us",
-    text: "+1 123 456 7890",
+    text: "+971 6 530 2080",
     type: "phoneNumber",
   },
   {
     title: "Location",
-    text: "UAE - Abo Dabi",
+    text: "UAE, Sharjah, Al Khan, Beach Tower 1, G-01",
     type: "location",
   },
   {
     title: "Business Hours",
-    text: "10:00 am - 4:00pm",
+    text: "9:00 am - 6:00pm",
     type: "time",
   },
 ];

@@ -2,37 +2,34 @@
   <v-card
     width="338"
     height="516"
-    image="@/assets/img/company-card-1.png"
+    :image="item.imgBac"
     class="d-flex flex-column align-center py-9 rounded-lg px-5"
     variant="flat"
     color="transparent"
   >
-    <v-avatar
-      color="#303C43"
-      size="160"
-      class="flex-column d-flex justify-center align-center pa-0"
-    >
-      <div style="width: 102px">
-        <v-img :height="58" src="@/assets/icon/logo-M.svg"></v-img>
-      </div>
-      <h6 class="body-2 text-center mt-2">OWNERS ASSOCIATION</h6>
-    </v-avatar>
+    <div style="width: 160px">
+      <v-img :height="160" :src="item?.icon"></v-img>
+    </div>
     <v-card-title
       style="border: 2px solid white; border-radius: 5px"
-      class="py-5 text-center px-15 text-wrap mt-5"
+      class="py-5 text-center px-15 text-wrap mt-5 w-100"
     >
-      <h6 class="text-h6 font-weight-medium">Owners Association Management</h6>
+      <h6 class="text-body-1 font-weight-medium">{{ item?.title }}</h6>
     </v-card-title>
     <!-- <v-card-title class="align-self-start position-relative decore mt-8">
       <h6 class="text-h6" style="padding-left: 25px">Company Address</h6>
     </v-card-title> -->
-    <v-avatar class="align-self-start mt-15" style="border: 1px solid white">
+    <!-- <v-avatar class="align-self-start mt-15" style="border: 1px solid white">
       <v-icon class="text-white"> mdi-arrow-top-right </v-icon>
-    </v-avatar>
+    </v-avatar> -->
   </v-card>
 </template>
 
-<script setup></script>
+<script setup>
+const props = defineProps({
+  item: Object,
+});
+</script>
 
 <style scoped>
 .decore::before {

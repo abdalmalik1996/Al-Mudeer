@@ -1,5 +1,5 @@
 <template>
-  <v-card image="@/assets/img/Partner-bac.jpg">
+  <v-card image="@/assets/img/Partner-bac.jpg" class="rounded-0">
     <v-card
       style="
         background: linear-gradient(
@@ -20,16 +20,23 @@
       </v-card-subtitle>
       <v-row justify="center">
         <v-col cols="12">
-          <v-sheet color="transparent" class="d-flex">
-            <v-card
-              class="pa-5"
-              width="300"
-              variant="text"
-              v-for="n in 7"
-              :key="n"
+          <v-sheet color="transparent">
+            <swiper-container
+              class="mt-10 d-flex align-center justify-center"
+              :slides-per-view="mdAndUp ? 4 : 'auto'"
+              :spaceBetween="20"
             >
-              <v-img :height="300" src="@/assets/img/Partner-6.png"></v-img>
-            </v-card>
+              <swiper-slide
+                v-for="n in 15"
+                :key="n"
+                :style="smAndUp ? 'width : 300px' : '50%'"
+                class="d-flex justify-center"
+              >
+                <v-card class="pa-5" width="300" variant="text">
+                  <v-img :height="300" :src="`/img/Partner/${n}.png`"></v-img>
+                </v-card>
+              </swiper-slide>
+            </swiper-container>
           </v-sheet>
         </v-col>
         <v-col cols="10">
@@ -41,10 +48,10 @@
               class="pa-5"
               width="300"
               variant="text"
-              v-for="n in 7"
+              v-for="n in 5"
               :key="n"
             >
-              <v-img :height="300" src="@/assets/img/Partner-6.png"></v-img>
+              <v-img :height="300" :src="`/img/trustedby/0${n}.png`"></v-img>
             </v-card>
           </v-sheet>
         </v-col>
@@ -53,6 +60,9 @@
   </v-card>
 </template>
 
-<script setup></script>
+<script setup>
+import { useDisplay } from "vuetify";
+const { smAndUp, mdAndUp } = useDisplay();
+</script>
 
 <style scoped></style>

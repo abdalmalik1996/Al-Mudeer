@@ -1,6 +1,6 @@
 <template>
   <v-card
-    class="pa-0 ma-0 text-white py-15"
+    class="pa-0 ma-0 text-white py-15 rounded-0"
     variant="flat"
     image="@/assets/img/Application-bac.png"
     hight="100vh"

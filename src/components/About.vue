@@ -9,7 +9,7 @@
                 About <span style="color: #4682b4">Company</span>
               </h4>
             </v-card-title>
-            <v-row>
+            <v-row class="ma-0">
               <v-col>
                 <v-card
                   v-for="(item, index) in items"
@@ -17,19 +17,19 @@
                   class="mb-4 py-4 text-white"
                   variant="text"
                 >
-                  <v-card-title>
+                  <!-- <v-card-title>
                     <h5 class="text-h4 font-weight-bold">
                       {{ item.title }}
                     </h5>
-                  </v-card-title>
+                  </v-card-title> -->
                   <v-card-subtitle style="opacity: 1" class="w-75 text-wrap">
-                    <p class="text-h6 font-weight-regular">
+                    <p class="text-h5 font-weight-regular">
                       {{ item.content }}
                     </p>
                   </v-card-subtitle>
                 </v-card>
               </v-col>
-              <v-col class="d-flex align-center">
+              <v-col class="d-flex justify-center align-center">
                 <v-img :height="400" src="@/assets/icon/logo-almudeer.svg">
                 </v-img>
               </v-col>
@@ -46,19 +46,19 @@ const items = [
   {
     title: "Where does it come from",
     content:
-      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. ",
+      "The first owner’s association management company in Sharjah with an experience difference that is the largest in the market due to our absolute seniority over all companies.",
     icon: "",
   },
   {
     title: "Where does it come from",
     content:
-      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. ",
+      "The perfect mix of services provided by our company is considered the greatest challenge for any competitor, as the company’s branches provide real estate services, property management, and even the management of owners’ associations and building developers, in addition to providing software that helps in following up on all of the previous at the same time. ",
     icon: "",
   },
   {
     title: "Where does it come from",
     content:
-      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. ",
+      "The accreditation of our company by government agencies and their reliance on us will always remain one of our greatest points of pride and the emergence of our strength and our serious presence in major projects that demonstrate how proud we are of our pivotal role in the United Arab Emirates.",
     icon: "",
   },
 ];

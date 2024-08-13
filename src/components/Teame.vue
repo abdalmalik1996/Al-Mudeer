@@ -21,11 +21,11 @@
               variant="flat"
               color="transparent"
               style=""
-              v-for="n in 3"
-              :key="n"
-              :style="n === 2 ? 'transform: translateY(50px)' : ''"
+              v-for="(item, index) in teams"
+              :key="index"
+              :style="index === 1 ? 'transform: translateY(50px)' : ''"
             >
-              <TeameCard />
+              <TeameCard :team="item" />
             </v-card>
           </v-sheet>
         </v-col>
@@ -36,6 +36,26 @@
 
 <script setup>
 import TeameCard from "./TeameCard.vue";
+const teams = [
+  {
+    img: "1.png",
+    name: "Feras Al Helo",
+    posation: "CEO",
+    linkedin: "https://www.linkedin.com/in/feras-alhelo-8458bba2/",
+  },
+  {
+    img: "2.png",
+    name: "Mohammad Hani Dalleh",
+    posation: "General Manager",
+    linkedin: "https://www.linkedin.com/in/mohammad-hani-dalleh-2b2a4a136/",
+  },
+  {
+    img: "3.png",
+    name: "Hisham Bekhit",
+    posation: "owners association manager",
+    linkedin: "https://www.linkedin.com/in/hisham-bekhit-678a53224/",
+  },
+];
 </script>
 
 <style scoped></style>

@@ -10,17 +10,21 @@
     <v-img
       width="100%"
       :height="214"
-      src="@/assets/img/Certificate-1.png"
+      :src="`/img/Certificate/${item.img}.png`"
     ></v-img>
     <v-card-title class="text-center">
-      <h5 class="text-h5">Certificate Name</h5>
+      <h5 class="text-h5">Excellence Award</h5>
     </v-card-title>
     <v-card-subtitle class="text-center">
-      <p class="text-h6">2024</p>
+      <p class="text-h6">{{ item.date }}</p>
     </v-card-subtitle>
   </v-card>
 </template>
 
-<script setup></script>
+<script setup>
+const props = defineProps({
+  item: Object,
+});
+</script>
 
 <style scoped></style>

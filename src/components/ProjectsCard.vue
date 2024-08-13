@@ -13,15 +13,19 @@
       color="#0D1519"
       class="clip-right"
     >
-      <v-img height="362" src="@/assets/img/projects-card-1.png"></v-img>
+      <v-img height="362" :src="item.img"></v-img>
       <v-card-title class="text-center py-9 mt-5">
-        <h4 class="text-h4">AL REDS</h4>
+        <h4 class="text-h4 text-capitalize">{{ item?.title }}</h4>
       </v-card-title>
     </v-card>
   </v-card>
 </template>
 
-<script setup></script>
+<script setup>
+const props = defineProps({
+  item: Object,
+});
+</script>
 
 <style scoped>
 .clip-right {
