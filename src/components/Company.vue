@@ -1,9 +1,5 @@
 <template>
-<<<<<<< HEAD
   <v-card image="@/assets/img/Company-bac.jpg" class="rounded-0">
-=======
-  <v-card image="@/assets/img/Company-bac.jpg">
->>>>>>> 2f660f370e5902ee44253c4bf4085e8704c97de0
     <v-card
       class="py-16 text-white"
       style="
