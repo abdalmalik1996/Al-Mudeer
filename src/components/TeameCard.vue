@@ -2,7 +2,7 @@
   <v-card
     variant="flat"
     color="transparent"
-    :width="smAndUp ? '423' : '400'"
+    :width="smAndUp ? '400' : '400'"
     height="451"
     class="position-relative d-flex align-end"
   >

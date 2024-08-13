@@ -6,7 +6,7 @@
       style="background: rgba(7, 5, 15, 0.6)"
     >
       <v-row justify="center" class="ma-0">
-        <v-col cols="10">
+        <v-col cols="11">
           <v-card-title class="text-center text-h3"
             ><h4>The Executive Team</h4>
           </v-card-title>
@@ -16,7 +16,10 @@
               It has
             </p>
           </v-card-subtitle>
-          <v-sheet class="py-9 d-flex justify-center ga-15" color="transparent">
+          <v-sheet
+            class="py-9 d-flex justify-center flex-wrap ga-15"
+            color="transparent"
+          >
             <v-card
               variant="flat"
               color="transparent"
