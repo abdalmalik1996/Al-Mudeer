@@ -3,6 +3,7 @@
     <v-card
       class="py-16 text-white"
       style="
+        padding-top: 200px !important;
         background: linear-gradient(
             180deg,
             rgba(57, 23, 18, 0.3) 21.5%,

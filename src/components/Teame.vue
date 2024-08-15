@@ -1,5 +1,5 @@
 <template>
-  <v-card class="py-0" image="@/assets/img/Teame-bac.jpg">
+  <v-card class="py-0 rounded-0" image="@/assets/img/Teame-bac.jpg">
     <v-card
       min-height="100vh"
       class="text-white py-15"
@@ -26,7 +26,6 @@
               style=""
               v-for="(item, index) in teams"
               :key="index"
-              :style="index === 1 ? 'transform: translateY(50px)' : ''"
             >
               <TeameCard :team="item" />
             </v-card>

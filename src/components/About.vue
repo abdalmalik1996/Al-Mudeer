@@ -1,5 +1,5 @@
 <template>
-  <v-card variant="flat" image="@/assets/img/About-bac.png">
+  <v-card variant="flat" image="@/assets/img/About-bac.png" class="rounded-0">
     <v-card min-height="100vh" style="background: rgba(48, 60, 67, 0.4)">
       <v-row justify="center">
         <v-col cols="10">

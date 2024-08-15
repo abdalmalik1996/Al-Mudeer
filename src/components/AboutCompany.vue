@@ -1,16 +1,15 @@
 <template>
-  <v-sheet color="transparent" class="position-relative rounded-0">
-    <v-card
-      color="#090F13"
-      min-height="100vh"
-      class="text-white rounded-0"
-      style="padding-bottom: 300px"
-    >
+  <v-sheet
+    color="transparent"
+    class="position-relative rounded-0"
+    :style="{ height: calculatedHeight }"
+  >
+    <v-card color="#090F13" min-height="100vh" class="text-white rounded-0">
       <v-row justify="end" class="ma-0">
         <v-col cols="12" md="6" class="d-flex align-center">
           <v-card variant="text">
             <v-card-title class="py-9">
-              <h4 class="text-h3 font-weight-bold">About Company</h4>
+              <h4 class="text-h3 font-weight-bold">Who’s Al Mudeer</h4>
             </v-card-title>
             <v-card-subtitle class="text-wrap" style="opacity: 1">
               <p class="text-h6 font-weight-light mb-10">
@@ -54,87 +53,53 @@
         </v-col>
       </v-row>
     </v-card>
-    <v-row
-      justify="center"
-      class="ma-0 w-100"
-      style="
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-        z-index: 9999;
-      "
-    >
-      <v-col cols="10">
-        <v-sheet
-          height="363px"
-          class="rounded-xl d-flex justify-lg-space-between align-center"
-          color="#1A2226"
-          variant="flat"
-        >
-          <v-card
-            variant="text"
-            v-for="(item, index) in itemsCounter"
-            :key="index"
-            class="text-white text-center pa-8 d-flex flex-column align-center"
-          >
-            <v-img
-              width="130"
-              :height="130"
-              :src="`/icon/${item.icon}.svg`"
-            ></v-img>
-            <v-card-title>
-              <h5 class="text-h2 font-weight-bold">{{ item.number }}</h5>
-            </v-card-title>
-            <v-card-subtitle class="d-flex justify-center" style="opacity: 1">
-              <p class="w-75 text-wrap text-center text-h6">{{ item.title }}</p>
-            </v-card-subtitle>
-          </v-card>
-        </v-sheet>
-      </v-col>
-    </v-row>
+
     <v-card
-      image="@/assets/img/Certificate-bac.png"
-      min-height="100vh"
-      class="rounded-0"
+      variant="flat"
+      color="transparent"
+      class="pa-0 w-100 rounded-0"
+      style="transform: translateY(-50%); z-index: 9999; position: absolute"
     >
-      <v-card
-        class="h-100 text-white"
-        style="background: rgba(7, 5, 15, 0.8); padding-top: 300px"
-      >
-        <v-card-title class="text-center">
-          <h3 class="text-h3 font-weight-bold">Certificate</h3>
-        </v-card-title>
-        <v-card-subtitle class="w-100 d-flex justify-center" style="opacity: 1">
-          <p class="text-h5 text-wrap w-50 text-center">
-            With experience spanning more than 14 years, we are proud to share
-            with you certificates that distinguish us as the best company in
-            Sharjah for more than 8 consecutive years without dispute.
-          </p>
-        </v-card-subtitle>
-        <v-sheet color="transparent" class="ga-10 py-9">
-          <swiper-container
-            class="mt-10 d-flex align-center justify-center"
-            :slides-per-view="mdAndUp ? 3 : 'auto'"
-            :spaceBetween="20"
+      <v-row justify="center" class="ma-0 pa-0 w-100">
+        <v-col cols="10" class="py-0">
+          <v-sheet
+            height="363px"
+            class="rounded-xl d-flex justify-lg-space-between align-center"
+            color="#1A2226"
+            variant="flat"
           >
-            <swiper-slide
-              v-for="(item, index) in itemsCertificate"
+            <v-card
+              variant="text"
+              v-for="(item, index) in itemsCounter"
               :key="index"
-              :style="smAndUp ? 'width : 345px' : '50%'"
-              class="d-flex justify-center"
+              class="text-white text-center pa-8 d-flex flex-column align-center"
             >
-              <CertificateCard :item="item" />
-            </swiper-slide>
-          </swiper-container>
-        </v-sheet>
-      </v-card>
+              <v-img
+                width="130"
+                :height="130"
+                :src="`/icon/${item.icon}.svg`"
+              ></v-img>
+              <v-card-title>
+                <h5 class="text-h2 font-weight-bold">{{ item.number }}</h5>
+              </v-card-title>
+              <v-card-subtitle class="d-flex justify-center" style="opacity: 1">
+                <p class="w-75 text-wrap text-center text-h6">
+                  {{ item.title }}
+                </p>
+              </v-card-subtitle>
+            </v-card>
+          </v-sheet>
+        </v-col>
+      </v-row>
     </v-card>
+    <Company />
   </v-sheet>
 </template>
 
 <script setup>
 import { useDisplay } from "vuetify";
+import Company from "@/components/Company.vue";
+
 const { smAndUp, mdAndUp } = useDisplay();
 import CertificateCard from "./CertificateCard.vue";
 const itemsCounter = [
@@ -157,44 +122,6 @@ const itemsCounter = [
     title: "AL-Mudeer Projects",
     number: "+ 50",
     icon: "MudeerProjects",
-  },
-];
-const itemsCertificate = [
-  {
-    img: 1,
-    date: "2022",
-  },
-  {
-    img: 2,
-    date: "2021",
-  },
-  {
-    img: 3,
-    date: "2020",
-  },
-  {
-    img: 4,
-    date: "2013",
-  },
-  {
-    img: 5,
-    date: "2018",
-  },
-  {
-    img: 6,
-    date: "2019",
-  },
-  {
-    img: 7,
-    date: "2012",
-  },
-  {
-    img: 8,
-    date: "2023",
-  },
-  {
-    img: 9,
-    date: "2020",
   },
 ];
 </script>

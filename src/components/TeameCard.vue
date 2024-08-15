@@ -4,10 +4,10 @@
     color="transparent"
     :width="smAndUp ? '400' : '400'"
     height="451"
-    class="position-relative d-flex align-end"
+    class="position-relative d-flex align-end rounded-xl"
   >
     <v-card
-      width="423"
+      width="400"
       height="374"
       variant="flat"
       color="white"
@@ -37,7 +37,9 @@
           class="text-center"
           style="opacity: 1 !important ; color: brown"
         >
-          <p class="text-h6 font-weight-medium">{{ team?.posation }}</p>
+          <p class="text-h6 font-weight-medium text-capitalize">
+            {{ team?.posation }}
+          </p>
         </v-card-subtitle>
         <v-card-subtitle class="text-center mt-8">
           <p class="text-wrap text-body-1 font-weight-medium">

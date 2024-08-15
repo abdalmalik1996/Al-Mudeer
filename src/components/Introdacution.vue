@@ -1,7 +1,7 @@
 <template>
   <v-sheet height="100vh" min-height="100vh">
     <v-card
-      class="position-relative pa-0 h-100 d-flex align-end"
+      class="position-relative pa-0 h-100 d-flex align-end rounded-0"
       image="@/assets/img/back-sky.png"
     >
       <div

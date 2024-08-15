@@ -6,7 +6,7 @@
       style="background: rgba(48, 60, 67, 0.6)"
     >
       <v-row class="ma-0" justify="center">
-        <v-col cols="10">
+        <v-col cols="11">
           <v-card-title class="text-center">
             <h4 class="text-h3 font-weight-bold">Our Projects</h4>
           </v-card-title>

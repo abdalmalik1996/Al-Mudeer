@@ -2,22 +2,28 @@
   <v-card
     width="380"
     height="613"
-    class="d-flex align-end"
+    class="d-flex flex-column justify-end"
     color="transparent"
     variant="text"
   >
-    <v-card
-      variant="flat"
-      width="380"
-      height="520"
-      color="#0D1519"
-      class="clip-right"
-    >
-      <v-img height="362" :src="item.img"></v-img>
-      <v-card-title class="text-center py-9 mt-5">
-        <h4 class="text-h4 text-capitalize">{{ item?.title }}</h4>
-      </v-card-title>
-    </v-card>
+    <v-hover>
+      <template v-slot="{ isHovering, props }">
+        <v-card
+          variant="flat"
+          width="380"
+          height="400"
+          color="#0D1519"
+          class="clip-right d-flex align-end"
+          v-bind="props"
+        >
+          <v-img :src="item.img"></v-img>
+        </v-card>
+
+        <v-card-title class="text-center" style="border: white 1px solid">
+          <h4 class="text-h4 text-capitalize text-white">{{ item?.title }}</h4>
+        </v-card-title>
+      </template>
+    </v-hover>
   </v-card>
 </template>
 
