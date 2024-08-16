@@ -14,7 +14,7 @@
           <p class="text-h5 font-weight-medium">Features of al-mudeer app</p>
         </v-card-subtitle>
       </v-col>
-      <v-col cols="10">
+      <v-col cols="11">
         <v-row>
           <v-col cols="12" md="4" class="pl-0 d-flex align-center">
             <v-list bg-color="transparent" class="pl-0">

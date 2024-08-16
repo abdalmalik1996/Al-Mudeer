@@ -6,7 +6,7 @@
   >
     <v-card class="h-100 w-100 text-white py-15 rounded-0" color="#07050fe5">
       <v-row class="ma-0" justify="center">
-        <v-col cols="12" md="10">
+        <v-col cols="12" md="11">
           <v-card-title class="text-center">
             <h3 class="text-h3 font-weight-bold">
               Let’s <span style="color: #4682b4"> Connect </span>
@@ -46,11 +46,11 @@
                   </template>
                 </v-list-item>
               </v-list>
-              <v-card-title class="pl-0 mt-1 pb-1">
+              <!-- <v-card-title class="pl-0 mt-1 pb-1">
                 <h4 class="text-h3 font-weight-bold">
                   Connect <span style="color: #4682b4">With US</span>
                 </h4>
-              </v-card-title>
+              </v-card-title> -->
               <v-card-actions class="pl-0 mt-3">
                 <v-btn
                   style="background-color: rgba(255, 255, 255, 0.1)"

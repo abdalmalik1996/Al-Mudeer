@@ -1,12 +1,12 @@
 <template>
   <v-card image="@/assets/img/projects-bac.jpg" class="rounded-0">
     <v-card
-      class="py-15 text-white"
+      class="py-15 pb-0 text-white rounded-0"
       min-height="100vh"
       style="background: rgba(48, 60, 67, 0.6)"
     >
       <v-row class="ma-0" justify="center">
-        <v-col cols="11">
+        <v-col cols="11" class="pb-0">
           <v-card-title class="text-center">
             <h4 class="text-h3 font-weight-bold">Our Projects</h4>
           </v-card-title>
@@ -18,14 +18,14 @@
           </v-card-subtitle>
           <v-sheet color="transparent" class="ga-10">
             <swiper-container
-              class="mt-10 d-flex align-center justify-center"
+              class="mt-10 d-flex align-end justify-center"
               slides-per-view="auto"
-              :spaceBetween="25"
+              autoplay
             >
               <swiper-slide
                 v-for="(item, index) in items"
                 :key="index"
-                :style="smAndUp ? 'width : 380px' : '50%'"
+                :style="smAndUp ? 'width : 300px' : '50%'"
                 class="d-flex justify-center"
               >
                 <v-card variant="text" color="transparent">

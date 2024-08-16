@@ -1,16 +1,17 @@
 <template>
   <v-card image="@/assets/img/Partner-bac.jpg" class="rounded-0">
     <v-card
+      class="text-white py-15"
+      min-height="100vh"
+      color="transparent"
       style="
         background: linear-gradient(
             0deg,
-            rgba(70, 130, 180, 0.4),
-            rgba(70, 130, 180, 0.4)
+            rgb(3 18 30 / 45%),
+            rgb(4 24 40 / 40%)
           ),
           linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
       "
-      class="text-white py-15"
-      min-height="100vh"
     >
       <v-card-title class="text-center">
         <h4 class="text-h3 font-weight-bold">Our Partner</h4>
@@ -51,7 +52,23 @@
               v-for="n in 5"
               :key="n"
             >
-              <v-img :height="300" :src="`/img/trustedby/0${n}.png`"></v-img>
+              <v-hover>
+                <template v-slot="{ isHovering, props }">
+                  <v-img
+                    class="filter_white cursor-pointer"
+                    :height="300"
+                    :src="
+                      isHovering
+                        ? `/img/trustedby/${n}.png`
+                        : `/img/trustedby/${n}.png`
+                    "
+                    c
+                    :style="isHovering ? 'transform: scale(1.1)' : ''"
+                    style="transition: 1s"
+                    v-bind="props"
+                  ></v-img>
+                </template>
+              </v-hover>
             </v-card>
           </v-sheet>
         </v-col>

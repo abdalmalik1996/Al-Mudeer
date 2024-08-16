@@ -4,7 +4,12 @@
     class="position-relative rounded-0"
     :style="{ height: calculatedHeight }"
   >
-    <v-card color="#090F13" min-height="100vh" class="text-white rounded-0">
+    <v-card
+      color="#090F13"
+      min-height="100vh"
+      class="text-white rounded-0"
+      :style="mdAndUp ? 'padding-bottom: 200px' : 'padding-bottom: 320px'"
+    >
       <v-row justify="end" class="ma-0">
         <v-col cols="12" md="6" class="d-flex align-center">
           <v-card variant="text">
@@ -61,33 +66,49 @@
       style="transform: translateY(-50%); z-index: 9999; position: absolute"
     >
       <v-row justify="center" class="ma-0 pa-0 w-100">
-        <v-col cols="10" class="py-0">
+        <v-col cols="11" class="py-0">
           <v-sheet
-            height="363px"
+            min-height="363px"
             class="rounded-xl d-flex justify-lg-space-between align-center"
             color="#1A2226"
             variant="flat"
           >
-            <v-card
-              variant="text"
-              v-for="(item, index) in itemsCounter"
-              :key="index"
-              class="text-white text-center pa-8 d-flex flex-column align-center"
-            >
-              <v-img
-                width="130"
-                :height="130"
-                :src="`/icon/${item.icon}.svg`"
-              ></v-img>
-              <v-card-title>
-                <h5 class="text-h2 font-weight-bold">{{ item.number }}</h5>
-              </v-card-title>
-              <v-card-subtitle class="d-flex justify-center" style="opacity: 1">
-                <p class="w-75 text-wrap text-center text-h6">
-                  {{ item.title }}
-                </p>
-              </v-card-subtitle>
-            </v-card>
+            <v-row class="ma-0">
+              <v-col
+                cols="12"
+                sm="6"
+                md="3"
+                v-for="(item, index) in itemsCounter"
+                :key="index"
+              >
+                <v-card
+                  variant="text"
+                  class="text-white text-center d-flex flex-column align-center"
+                >
+                  <v-img
+                    width="130"
+                    :height="130"
+                    :src="`/icon/${item.icon}.svg`"
+                  ></v-img>
+                  <v-card-title>
+                    <h5 class="text-h4 text-md-h3 font-weight-bold">
+                      {{ item.number }}
+                    </h5>
+                  </v-card-title>
+                  <v-card-subtitle
+                    class="d-flex justify-center"
+                    style="opacity: 1"
+                  >
+                    <p
+                      :style="mdAndUp ? 'width : 90%' : 'width : 100%'"
+                      class="text-wrap text-center text-h6 font-weight-medium"
+                    >
+                      {{ item.title }}
+                    </p>
+                  </v-card-subtitle>
+                </v-card>
+              </v-col>
+            </v-row>
           </v-sheet>
         </v-col>
       </v-row>

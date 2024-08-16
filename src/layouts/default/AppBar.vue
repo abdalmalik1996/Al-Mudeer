@@ -8,7 +8,7 @@
   >
     <v-row justify="center">
       <v-col cols="10" class="d-flex">
-        <v-img height="48" max-width="84" src="@/assets/icon/logo.svg" />
+        <v-img height="48" max-width="84" src="/logo-white.svg" />
         <v-spacer />
         <template #append></template>
         <v-app-bar-nav-icon

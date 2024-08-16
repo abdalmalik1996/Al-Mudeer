@@ -7,7 +7,7 @@
       <div
         style="
           position: absolute;
-          top: 70px;
+          top: 135px;
           left: 0px;
           z-index: -1;
           width: 100%;
@@ -15,19 +15,28 @@
         class="d-flex justify-center"
       >
         <v-img
-          width="90%"
-          height="350"
-          src="@/assets/icon/logo-group.svg"
+          width="100%"
+          height="200"
+          src="/img/almudeer_white-word.png"
         ></v-img>
+        <!-- src="/img/almudeer_white-word.png" -->
+
+        <!-- <v-parallax src="@/assets/icon/logo-group.svg"></v-parallax> -->
       </div>
 
-      <v-img
+      <!-- <v-img
         class="img-building"
         style="z-index: 9"
         cover
         height="90vh"
         src="@/assets/img/buildings.png"
-      ></v-img>
+      ></v-img> -->
+      <v-parallax
+        cover
+        height="99vh"
+        src="@/assets/img/buildings.png"
+        class="test"
+      ></v-parallax>
       <div
         style="
           z-index: 10;
@@ -48,5 +57,11 @@
 <style>
 .img-building .v-img__img {
   object-position: bottom !important;
+}
+.test .v-img__img {
+  object-position: top;
+}
+.ttt {
+  background-attachment: fixed;
 }
 </style>

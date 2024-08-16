@@ -3,7 +3,7 @@
     <template v-slot="{ isHovering, props }">
       <v-card
         variant="flat"
-        color="#303c43ba"
+        color="#303c4359"
         class="pa-5 text-white d-flex flex-column align-center rounded-xl cursor-pointer"
         width="345"
         height="350"

@@ -35,7 +35,7 @@
         >
         <v-card-subtitle
           class="text-center"
-          style="opacity: 1 !important ; color: brown"
+          style="opacity: 1 !important ; color: #a52a2a"
         >
           <p class="text-h6 font-weight-medium text-capitalize">
             {{ team?.posation }}
@@ -49,7 +49,7 @@
         </v-card-subtitle>
         <v-card variant="flat" class="mt-16">
           <a :href="team?.linkedin" target="_blank">
-            <v-img :height="50" src="@/assets/icon/linkedin.svg"></v-img>
+            <v-img :height="30" src="@/assets/icon/linkedin.svg"></v-img>
           </a>
         </v-card>
       </div>

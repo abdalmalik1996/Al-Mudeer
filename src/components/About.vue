@@ -1,8 +1,12 @@
 <template>
   <v-card variant="flat" image="@/assets/img/About-bac.png" class="rounded-0">
-    <v-card min-height="100vh" style="background: rgba(48, 60, 67, 0.4)">
+    <v-card
+      class="rounded-0"
+      min-height="100vh"
+      style="background: rgba(48, 60, 67, 0.4)"
+    >
       <v-row justify="center">
-        <v-col cols="10">
+        <v-col cols="11">
           <v-card variant="flat" color="transparent" class="py-9">
             <v-card-title class="text-center py-15">
               <h4 class="text-h3 text-white font-weight-bold">

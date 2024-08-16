@@ -5,7 +5,7 @@
     class="rounded-0"
   >
     <v-card
-      class="h-100 text-white"
+      class="h-100 text-white rounded-0"
       style="background: rgba(7, 5, 15, 0.8); padding-top: 300px"
     >
       <v-row justify="center">

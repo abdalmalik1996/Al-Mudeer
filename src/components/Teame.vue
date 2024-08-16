@@ -17,7 +17,7 @@
             </p>
           </v-card-subtitle>
           <v-sheet
-            class="py-9 d-flex justify-center flex-wrap ga-15"
+            class="py-9 d-flex justify-center flex-wrap ga-5"
             color="transparent"
           >
             <v-card

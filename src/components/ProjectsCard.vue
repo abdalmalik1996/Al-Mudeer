@@ -1,6 +1,6 @@
 <template>
   <v-card
-    width="380"
+    width="300"
     height="613"
     class="d-flex flex-column justify-end"
     color="transparent"
@@ -10,17 +10,21 @@
       <template v-slot="{ isHovering, props }">
         <v-card
           variant="flat"
-          width="380"
+          width="300"
           height="400"
-          color="#0D1519"
-          class="clip-right d-flex align-end"
+          color="transparent"
+          class="d-flex align-end rounded-0 cursor-pointer"
           v-bind="props"
+          :style="isHovering ? 'transform: scale(1.3) translateY(-40px);' : ''"
+          style="transition: 0.5s"
         >
           <v-img :src="item.img"></v-img>
         </v-card>
-
-        <v-card-title class="text-center" style="border: white 1px solid">
-          <h4 class="text-h4 text-capitalize text-white">{{ item?.title }}</h4>
+        <v-card-title
+          :style="isHovering ? 'opacity: 0.5;' : 'opacity: 0'"
+          class="text-center mt-2 test d-none"
+        >
+          <h4 class="text-h5 text-capitalize text-white">{{ item?.title }}</h4>
         </v-card-title>
       </template>
     </v-hover>
