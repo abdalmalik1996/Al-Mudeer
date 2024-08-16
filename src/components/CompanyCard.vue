@@ -2,7 +2,7 @@
   <v-hover>
     <template v-slot="{ isHovering, props }">
       <v-card
-        width="338"
+        width="280"
         :height="isHovering ? '571' : '516'"
         :image="item.imgBac"
         class="d-flex flex-column align-center py-9 rounded-lg px-5 cursor-pointer transition"
@@ -12,17 +12,18 @@
       >
         <v-avatar
           size="160"
-          :color="isHovering ? '#FFFF' : '#303C43'"
+          :color="isHovering ? 'transparent' : 'transparent'"
           :style="isHovering ? 'transform: translateY(100px)' : ''"
           class="flex-column pa-0 transition"
         >
-          <div style="height: 57px; width: 101px">
+          <div style="height: 60px; width: 104px">
             <v-img
+              :style="isHovering ? 'transform : scale(2)' : ''"
               :src="isHovering ? item?.icon : '/icon/logo-company.svg'"
             ></v-img>
           </div>
-          <h6
-            :class="isHovering ? 'mt-n3' : 'mt-3'"
+          <!-- <h6
+            :class="isHovering ? 'mt-n3 ' : 'mt-3 '"
             class="text-capitalize"
             style="letter-spacing: 0px !important; font-size: 10px !important"
           >
@@ -31,7 +32,7 @@
                 ? "OWNERS ASSOCIATION"
                 : item?.title
             }}
-          </h6>
+          </h6> -->
         </v-avatar>
         <div v-if="!isHovering">
           <v-card-title

@@ -37,7 +37,7 @@
           </v-card-subtitle> -->
           <v-sheet
             color="transparent"
-            class="d-flex flex-wrap justify-center ga-5 py-16 align-center"
+            class="d-flex flex-wrap justify-center ga-10 py-16 align-center"
             style="min-height: 700px !important"
           >
             <v-card

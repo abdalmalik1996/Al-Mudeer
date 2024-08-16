@@ -2,12 +2,12 @@
   <v-card
     variant="flat"
     color="transparent"
-    :width="smAndUp ? '400' : '400'"
+    :width="smAndUp ? '350' : '400'"
     height="451"
     class="position-relative d-flex align-end rounded-xl"
   >
     <v-card
-      width="400"
+      width="350"
       height="374"
       variant="flat"
       color="white"
@@ -29,7 +29,7 @@
 
       <div style="margin-top: 80px" class="">
         <v-card-title class="text-center"
-          ><h5 class="text-h4 font-weight-medium">
+          ><h5 style="font-size: 28px" class="font-weight-medium">
             {{ team?.name }}
           </h5></v-card-title
         >
@@ -47,7 +47,7 @@
             It has roots in
           </p>
         </v-card-subtitle>
-        <v-card variant="flat" class="mt-16">
+        <v-card variant="flat" class="mt-10">
           <a :href="team?.linkedin" target="_blank">
             <v-img :height="30" src="@/assets/icon/linkedin.svg"></v-img>
           </a>

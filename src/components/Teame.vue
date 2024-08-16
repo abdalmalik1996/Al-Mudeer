@@ -1,5 +1,6 @@
 <template>
-  <v-card class="py-0 rounded-0" image="@/assets/img/Teame-bac.jpg">
+  <v-card class="py-0 rounded-0" image="/img/Team/Team.jpg">
+    <!-- image="@/assets/img/Teame-bac.jpg" -->
     <v-card
       min-height="100vh"
       class="text-white py-15"
@@ -10,14 +11,14 @@
           <v-card-title class="text-center text-h3"
             ><h4>The Executive Team</h4>
           </v-card-title>
-          <v-card-subtitle class="text-center text-h5" style="opacity: 1">
+          <!-- <v-card-subtitle class="text-center text-h5" style="opacity: 1">
             <p>
               Contrary to popular belief, Lorem Ipsum is not simply random text.
               It has
             </p>
-          </v-card-subtitle>
+          </v-card-subtitle> -->
           <v-sheet
-            class="py-9 d-flex justify-center flex-wrap ga-5"
+            class="py-9 d-flex justify-center flex-wrap ga-7 ga-md-15"
             color="transparent"
           >
             <v-card
