@@ -85,12 +85,12 @@
                   class="text-white text-center d-flex flex-column align-center"
                 >
                   <v-img
-                    width="100"
-                    :height="100"
+                    width="85"
+                    :height="85"
                     :src="`/icon/${item.icon}.svg`"
                   ></v-img>
                   <v-card-title>
-                    <h5 class="text-h4 text-md-h3 font-weight-bold">
+                    <h5 class="text-h4 text-md-h4 font-weight-bold">
                       {{ item.number }}
                     </h5>
                   </v-card-title>
@@ -100,7 +100,7 @@
                   >
                     <p
                       :style="mdAndUp ? 'width : 90%' : 'width : 100%'"
-                      class="text-wrap text-center text-h6 font-weight-medium"
+                      class="text-wrap text-center text-body-1 font-weight-medium"
                     >
                       {{ item.title }}
                     </p>
