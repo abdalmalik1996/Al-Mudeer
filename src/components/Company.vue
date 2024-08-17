@@ -4,7 +4,7 @@
       class="py-16 text-white rounded-0"
       :style="
         mdAndUp
-          ? 'padding-top: 200px !important '
+          ? 'padding-top: 150px !important '
           : 'padding-top: 320px !important'
       "
       color="transparent"
@@ -39,7 +39,7 @@
           <v-sheet
             color="transparent"
             class="d-flex flex-wrap justify-center ga-10 py-16 align-center"
-            style="min-height: 700px !important"
+            style="min-height: 650px !important"
           >
             <v-card
               variant="flat"
