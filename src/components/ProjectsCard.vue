@@ -22,7 +22,7 @@
         </v-card>
         <v-card-title
           :style="isHovering ? 'opacity: 0.5;' : 'opacity: 0'"
-          class="text-center mt-2 test d-none"
+          class="text-center mt-2 test"
         >
           <h4 class="text-h5 text-capitalize text-white">{{ item?.title }}</h4>
         </v-card-title>

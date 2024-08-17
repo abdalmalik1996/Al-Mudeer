@@ -5,38 +5,34 @@
       image="@/assets/img/back-sky.png"
     >
       <div
-        style="
-          position: absolute;
-          top: 135px;
-          left: 0px;
-          z-index: -1;
-          width: 100%;
-        "
+        style="position: fixed; top: 70px; left: 0px; z-index: -1; width: 100%"
         class="d-flex justify-center"
+        data-aos="fade-up"
+        data-aos-duration="3000"
       >
         <v-img
           width="100%"
-          height="200"
-          src="/img/almudeer_white-word.png"
+          height="300"
+          src="@/assets/icon/logo-group.svg"
         ></v-img>
         <!-- src="/img/almudeer_white-word.png" -->
 
         <!-- <v-parallax src="@/assets/icon/logo-group.svg"></v-parallax> -->
       </div>
 
-      <!-- <v-img
-        class="img-building"
+      <v-img
+        class="img-building img-fixed"
         style="z-index: 9"
         cover
-        height="90vh"
-        src="@/assets/img/buildings.png"
-      ></v-img> -->
-      <v-parallax
+        height="80vh"
+        src="@/assets/img/Bg-cut.png"
+      ></v-img>
+      <!-- <v-parallax
         cover
         height="99vh"
         src="@/assets/img/buildings.png"
         class="test"
-      ></v-parallax>
+      ></v-parallax> -->
       <div
         style="
           z-index: 10;
@@ -52,7 +48,11 @@
   </v-sheet>
 </template>
 
-<script setup></script>
+<script setup>
+import Aos from "aos";
+import "aos/dist/aos.css";
+Aos.init();
+</script>
 
 <style>
 .img-building .v-img__img {
@@ -61,7 +61,8 @@
 .test .v-img__img {
   object-position: top;
 }
-.ttt {
-  background-attachment: fixed;
+.img-fixed .v-img__img {
+  position: fixed;
+  top: 100px;
 }
 </style>

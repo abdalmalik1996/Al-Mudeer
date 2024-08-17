@@ -16,10 +16,13 @@
           :style="isHovering ? 'transform: translateY(100px)' : ''"
           class="flex-column pa-0 transition"
         >
-          <div style="height: 60px; width: 104px">
+          <div v-if="!isHovering" style="height: 60px; width: 104px">
+            <v-img src="/icon/logo-company.svg"></v-img>
+          </div>
+          <div v-if="isHovering" style="height: 60px; width: 104px">
             <v-img
               :style="isHovering ? 'transform : scale(2)' : ''"
-              :src="isHovering ? item?.icon : '/icon/logo-company.svg'"
+              :src="item?.icon"
             ></v-img>
           </div>
           <!-- <h6
@@ -34,10 +37,14 @@
             }}
           </h6> -->
         </v-avatar>
-        <div v-if="!isHovering">
+        <div v-if="!isHovering" class="w-100">
           <v-card-title
-            style="border: 2px solid white; border-radius: 5px"
-            class="py-5 text-center px-15 text-wrap mt-5 w-100"
+            style="
+              border-bottom: 1px solid #ffffff66;
+              border-radius: 0px;
+              height: 50px;
+            "
+            class="pt-5 pb-9 text-center d-flex align-center justify-center text-wrap mt-5 w-100"
           >
             <h6 class="text-body-1 font-weight-medium">
               {{ item?.title }}
@@ -94,6 +101,6 @@ const props = defineProps({
   filter: brightness(100%) saturate(0%);
 }
 .transition {
-  transition: 0.9s;
+  transition: 0.8s;
 }
 </style>

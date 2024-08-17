@@ -3,7 +3,7 @@
     class="pa-0 ma-0 text-white py-15 rounded-0"
     variant="flat"
     image="@/assets/img/Application-bac.png"
-    hight="100vh"
+    min-hight="100vh"
   >
     <v-row justify="center">
       <v-col cols="12">
@@ -44,8 +44,8 @@
               </v-list-item>
             </v-list>
           </v-col>
-          <v-col cols="12" md="4">
-            <v-img src="@/assets/img/phone.png" height="804"></v-img>
+          <v-col cols="12" md="4" class="d-flex align-center">
+            <v-img src="@/assets/img/phone.png" height="60vh"></v-img>
           </v-col>
           <v-col cols="12" md="4" class="d-flex align-center">
             <v-list bg-color="transparent" class="pl-0">

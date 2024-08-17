@@ -68,8 +68,7 @@
       <v-row justify="center" class="ma-0 pa-0 w-100">
         <v-col cols="11" class="py-0">
           <v-sheet
-            min-height="363px"
-            class="rounded-xl d-flex justify-lg-space-between align-center"
+            class="rounded-xl d-flex justify-lg-space-between align-center py-5"
             color="#1A2226"
             variant="flat"
           >

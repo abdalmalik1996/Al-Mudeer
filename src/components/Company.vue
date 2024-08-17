@@ -7,6 +7,7 @@
           ? 'padding-top: 200px !important '
           : 'padding-top: 320px !important'
       "
+      color="transparent"
       style="
         background: linear-gradient(
             180deg,
@@ -44,6 +45,8 @@
               variant="flat"
               color="transparent"
               v-for="(item, index) in items"
+              data-aos="fade-up"
+              :data-aos-delay="index * 2 + '00'"
               :key="index"
             >
               <CompanyCard :item="item" />
@@ -57,7 +60,10 @@
 
 <script setup>
 import CompanyCard from "./CompanyCard.vue";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import { useDisplay } from "vuetify/lib/framework.mjs";
+Aos.init();
 const { mdAndUp } = useDisplay();
 const items = [
   {

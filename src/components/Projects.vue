@@ -28,7 +28,12 @@
                 :style="smAndUp ? 'width : 300px' : '50%'"
                 class="d-flex justify-center"
               >
-                <v-card variant="text" color="transparent">
+                <v-card
+                  data-aos="fade-up"
+                  :data-aos-delay="index * 2 + '00'"
+                  variant="text"
+                  color="transparent"
+                >
                   <ProjectsCard :item="item" />
                 </v-card>
               </swiper-slide>
@@ -44,6 +49,10 @@
 import { useDisplay } from "vuetify";
 const { smAndUp, mdAndUp } = useDisplay();
 import ProjectsCard from "./ProjectsCard.vue";
+import Aos from "aos";
+import "aos/dist/aos.css";
+Aos.init();
+
 const items = [
   {
     img: "/img/Projects/1.webp",

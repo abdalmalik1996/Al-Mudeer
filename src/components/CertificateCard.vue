@@ -16,7 +16,16 @@
           width="100%"
           :height="214"
           :src="`/img/Certificate/${item.img}.png`"
-        ></v-img>
+        >
+          <template v-slot:placeholder>
+            <div class="d-flex align-center justify-center fill-height">
+              <v-progress-circular
+                color="grey-lighten-4"
+                indeterminate
+              ></v-progress-circular>
+            </div>
+          </template>
+        </v-img>
         <v-card-title class="text-center">
           <h5 class="text-h5">Excellence Award</h5>
         </v-card-title>
