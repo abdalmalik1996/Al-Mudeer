@@ -2,7 +2,7 @@
   <v-card
     class="pa-0 ma-0 text-white py-8 rounded-0"
     variant="flat"
-    image="@/assets/img/Application-bac.png"
+    image="@/assets/img/Application-bac-1.jpg"
     min-hight="100vh"
   >
     <v-row justify="center">
@@ -28,7 +28,7 @@
                 <v-list-item-title class="text-end py-0"
                   ><h4
                     class="text-h6 font-weight-bold pb-0"
-                    style="color: #61312a; border-bottom: 1px solid white"
+                    style="color: #d4cece; border-bottom: 1px solid white"
                   >
                     {{ item.title }}
                   </h4></v-list-item-title
@@ -59,7 +59,7 @@
                 <v-list-item-title class="text-start py-0"
                   ><h4
                     class="text-h6 font-weight-bold pb-0"
-                    style="color: #61312a; border-bottom: 1px solid white"
+                    style="color: #d4cece; border-bottom: 1px solid white"
                   >
                     {{ item.title }}
                   </h4></v-list-item-title

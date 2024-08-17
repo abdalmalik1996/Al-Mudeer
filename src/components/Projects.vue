@@ -1,14 +1,12 @@
 <template>
-  <v-card
-    image="@/assets/img/Projects-bac-2.jpg"
-    class="rounded-0"
-    color="#090F13"
-  >
+  <v-card class="rounded-0" color="transparent">
     <v-card
-      class="py-5 pb-0 text-white rounded-0"
+      class="py-5 pb-0 text-white rounded-0 d-flex align-center justify-center"
       min-height="100vh"
       style="background: rgba(48, 60, 67, 0.6)"
     >
+      <!-- style="background: rgba(48, 60, 67, 0.6)" -->
+
       <v-row class="ma-0" justify="center">
         <v-col cols="11" class="pb-0">
           <v-card-title class="text-center">
@@ -56,7 +54,6 @@ import ProjectsCard from "./ProjectsCard.vue";
 import Aos from "aos";
 import "aos/dist/aos.css";
 Aos.init();
-
 const items = [
   {
     img: "/img/Projects/1.webp",

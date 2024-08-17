@@ -25,6 +25,7 @@
               class="mt-10 d-flex align-center justify-center"
               :slides-per-view="mdAndUp ? 5 : 'auto'"
               :spaceBetween="20"
+              navigation="true"
             >
               <swiper-slide
                 v-for="(item, index) in itemsCertificate"
@@ -86,4 +87,9 @@ const itemsCertificate = [
 ];
 </script>
 
-<style scoped></style>
+<style scoped>
+swiper-container::part(button-prev),
+swiper-container::part(button-next) {
+  color: #a52a2a !important;
+}
+</style>

@@ -10,10 +10,10 @@
       color="#07050fe5"
     >
       <v-row class="ma-0" justify="center">
-        <v-col cols="12" md="11">
+        <v-col cols="12" md="10">
           <v-card-title class="text-center">
             <h3 class="text-h4 font-weight-bold">
-              Let’s <span style="color: #4682b4"> Connect </span>
+              Let’s <span style="color: #a52a2a"> Connect </span>
             </h3>
           </v-card-title>
           <v-card-subtitle
@@ -29,7 +29,7 @@
             <v-col cols="12" md="6">
               <v-card-title class="pl-0 pb-3">
                 <h4 class="text-h4 font-weight-bold">
-                  Our Office <span style="color: #4682b4">Info</span>
+                  Our Office <span style="color: #a52a2a">Info</span>
                 </h4>
               </v-card-title>
               <v-list bg-color="transparent">
@@ -54,7 +54,7 @@
               </v-list>
               <!-- <v-card-title class="pl-0 mt-1 pb-1">
                 <h4 class="text-h3 font-weight-bold">
-                  Connect <span style="color: #4682b4">With US</span>
+                  Connect <span style="color: #a52a2a">With US</span>
                 </h4>
               </v-card-title> -->
               <v-card-actions class="pl-0 mt-2">
@@ -121,7 +121,7 @@
                     auto-grow
                     rows="5"
                   ></v-textarea>
-                  <v-btn block color="#4682B4" size="large">Submit</v-btn>
+                  <v-btn block color="#a52a2a" size="large">Submit</v-btn>
                 </v-form>
               </v-card>
             </v-col>

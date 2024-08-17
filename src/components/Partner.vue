@@ -1,5 +1,5 @@
 <template>
-  <v-card image="@/assets/img/Partner-bac.jpg" class="rounded-0">
+  <v-card color="transparent" class="rounded-0">
     <v-card
       class="text-white py-15"
       min-height="100vh"
@@ -26,6 +26,7 @@
               class="mt-10 d-flex align-center justify-center"
               :slides-per-view="mdAndUp ? 4 : 'auto'"
               :spaceBetween="20"
+              navigation="true"
             >
               <swiper-slide
                 v-for="n in 15"
@@ -82,4 +83,9 @@ import { useDisplay } from "vuetify";
 const { smAndUp, mdAndUp } = useDisplay();
 </script>
 
-<style scoped></style>
+<style scoped>
+swiper-container::part(button-prev),
+swiper-container::part(button-next) {
+  color: #a52a2a !important;
+}
+</style>

@@ -25,9 +25,7 @@
       <v-row class="ma-0" justify="center">
         <v-col cols="11">
           <v-card-title class="text-center">
-            <h4 class="text-h4 font-weight-bold" style="color: #090f13">
-              Our Departments
-            </h4>
+            <h4 class="text-h4 font-weight-bold">Our Departments</h4>
           </v-card-title>
           <!-- <v-card-subtitle
             class="text-center mt-2"

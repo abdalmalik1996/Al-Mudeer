@@ -44,18 +44,21 @@ const teams = [
     img: "1.png",
     name: "Feras Al Helo",
     posation: "CEO",
+    text: "Patience, persistence and perspiration make an unbeatable combination for success.",
     linkedin: "https://www.linkedin.com/in/feras-alhelo-8458bba2/",
   },
   {
     img: "2.png",
     name: "Mohammad Hani Dalleh",
     posation: "General Manager",
+    text: "Do your work with your whole heart, and you will succeed - there's so little competition.",
     linkedin: "https://www.linkedin.com/in/mohammad-hani-dalleh-2b2a4a136/",
   },
   {
     img: "3.png",
     name: "Hisham Bekhit",
     posation: "owners association manager",
+    text: "Hard work beats talent when talent doesn't work hard.",
     linkedin: "https://www.linkedin.com/in/hisham-bekhit-678a53224/",
   },
 ];

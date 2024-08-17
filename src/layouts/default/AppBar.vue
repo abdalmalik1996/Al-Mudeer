@@ -7,7 +7,7 @@
     height="100"
   >
     <v-row justify="center">
-      <v-col cols="12" class="d-flex">
+      <v-col cols="10" class="d-flex">
         <v-img height="4vh" max-width="84" src="/logo-white.svg" />
         <v-spacer />
         <template #append></template>

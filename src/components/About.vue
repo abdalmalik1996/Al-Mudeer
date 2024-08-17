@@ -1,5 +1,5 @@
 <template>
-  <v-card variant="flat" image="@/assets/img/About-bac.png" class="rounded-0">
+  <v-card variant="flat" class="rounded-0" color="transparent">
     <v-card
       class="rounded-0"
       min-height="100vh"
@@ -10,7 +10,7 @@
           <v-card variant="flat" color="transparent" class="py-9">
             <v-card-title class="text-center py-15">
               <h4 class="text-h4 text-white font-weight-bold">
-                About <span style="color: #4682b4">Company</span>
+                About <span style="color: #61312a">Company</span>
               </h4>
             </v-card-title>
             <v-row class="ma-0">

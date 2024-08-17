@@ -171,7 +171,7 @@ const itemsCounter = [
   },
   {
     title: "AL-Mudeer Projects",
-    number: 50,
+    number: 40,
     prefix: "+ ",
     suffix: "",
     icon: "Units",

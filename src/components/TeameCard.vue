@@ -22,7 +22,7 @@
           transform: translateX(-50%);
         "
       >
-        <v-avatar size="155">
+        <v-avatar size="130">
           <v-img :src="`/img/Team/${team.img}`"></v-img>
         </v-avatar>
       </div>
@@ -43,8 +43,7 @@
         </v-card-subtitle>
         <v-card-subtitle class="text-center mt-1">
           <p class="text-wrap text-body-2 font-weight-medium">
-            Contrary to popular belief, Lorem Ipsum is not simply random text.
-            It has roots in
+            "{{ team?.text }}"
           </p>
         </v-card-subtitle>
         <v-card variant="flat" class="mt-10">
