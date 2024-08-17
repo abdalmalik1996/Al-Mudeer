@@ -2,8 +2,8 @@
   <v-hover>
     <template v-slot="{ isHovering, props }">
       <v-card
-        width="280"
-        :height="isHovering ? '521' : '466'"
+        width="250"
+        :height="isHovering ? '471' : '416'"
         :image="item.imgBac"
         class="d-flex flex-column align-center py-9 rounded-lg px-5 cursor-pointer transition"
         variant="flat"

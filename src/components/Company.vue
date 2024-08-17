@@ -39,7 +39,7 @@
           <v-sheet
             color="transparent"
             class="d-flex flex-wrap justify-center ga-10 py-16 align-center"
-            style="min-height: 650px !important"
+            style="min-height: 600px !important"
           >
             <v-card
               variant="flat"

@@ -5,7 +5,7 @@
       image="@/assets/img/back-sky.png"
     >
       <div
-        style="position: fixed; top: 70px; left: 0px; z-index: -1; width: 100%"
+        style="position: fixed; top: 50px; left: 0px; z-index: -1; width: 100%"
         class="d-flex justify-center"
         data-aos="fade-up"
         data-aos-duration="3000"
