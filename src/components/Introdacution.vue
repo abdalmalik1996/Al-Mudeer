@@ -5,14 +5,14 @@
       image="@/assets/img/back-sky.png"
     >
       <div
-        style="position: fixed; top: 50px; left: 0px; z-index: -1; width: 100%"
+        style="position: fixed; top: 70px; left: 0px; z-index: -1; width: 100%"
         class="d-flex justify-center"
         data-aos="fade-up"
         data-aos-duration="3000"
       >
         <v-img
           width="100%"
-          height="300"
+          height="40vh"
           src="@/assets/icon/logo-group.svg"
         ></v-img>
         <!-- src="/img/almudeer_white-word.png" -->
@@ -63,6 +63,6 @@ Aos.init();
 }
 .img-fixed .v-img__img {
   position: fixed;
-  top: 100px;
+  top: 20vh;
 }
 </style>

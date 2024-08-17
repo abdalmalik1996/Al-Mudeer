@@ -46,7 +46,7 @@
             "
             class="pt-5 pb-9 text-center d-flex align-center justify-center text-wrap mt-5 w-100"
           >
-            <h6 class="text-body-1 font-weight-medium">
+            <h6 class="text-body-2 font-weight-medium">
               {{ item?.title }}
             </h6>
           </v-card-title>
