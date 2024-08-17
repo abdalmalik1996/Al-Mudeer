@@ -85,8 +85,8 @@
                   class="text-white text-center d-flex flex-column align-center"
                 >
                   <v-img
-                    width="130"
-                    :height="130"
+                    width="100"
+                    :height="100"
                     :src="`/icon/${item.icon}.svg`"
                   ></v-img>
                   <v-card-title>
