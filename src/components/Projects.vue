@@ -1,31 +1,35 @@
 <template>
-  <v-card image="@/assets/img/projects-bac.jpg" class="rounded-0">
+  <v-card
+    image="@/assets/img/Projects-bac-2.jpg"
+    class="rounded-0"
+    color="#090F13"
+  >
     <v-card
-      class="py-15 pb-0 text-white rounded-0"
+      class="py-5 pb-0 text-white rounded-0"
       min-height="100vh"
       style="background: rgba(48, 60, 67, 0.6)"
     >
       <v-row class="ma-0" justify="center">
         <v-col cols="11" class="pb-0">
           <v-card-title class="text-center">
-            <h4 class="text-h3 font-weight-bold">Our Projects</h4>
+            <h4 class="text-h4 font-weight-bold">Our Projects</h4>
           </v-card-title>
           <v-card-subtitle style="opacity: 1" class="text-center mt-4">
-            <p class="text-h6 font-weight-medium">
+            <p class="text-body-1 font-weight-medium">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
               It has
             </p>
           </v-card-subtitle>
           <v-sheet color="transparent" class="ga-10">
             <swiper-container
-              class="mt-10 d-flex align-end justify-center"
+              class="mt-5 d-flex align-end justify-center"
               slides-per-view="auto"
               autoplay
             >
               <swiper-slide
                 v-for="(item, index) in items"
                 :key="index"
-                :style="smAndUp ? 'width : 300px' : '50%'"
+                :style="smAndUp ? 'width : 250px' : '50%'"
                 class="d-flex justify-center"
               >
                 <v-card

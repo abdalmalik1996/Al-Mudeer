@@ -1,18 +1,18 @@
 <template>
   <v-sheet height="100vh" min-height="100vh">
     <v-card
-      class="position-relative pa-0 h-100 d-flex align-end rounded-0"
+      class="position-relative pa-0 h-100 d-flex align-end rounded-0 card-img"
       image="@/assets/img/back-sky.png"
     >
       <div
-        style="position: fixed; top: 70px; left: 0px; z-index: -1; width: 100%"
+        style="position: fixed; top: 15vh; left: 0px; z-index: -1; width: 100%"
         class="d-flex justify-center"
         data-aos="fade-up"
         data-aos-duration="3000"
       >
         <v-img
           width="100%"
-          height="40vh"
+          height="35vh"
           src="@/assets/icon/logo-group.svg"
         ></v-img>
         <!-- src="/img/almudeer_white-word.png" -->
@@ -64,5 +64,8 @@ Aos.init();
 .img-fixed .v-img__img {
   position: fixed;
   top: 20vh;
+}
+.card-img .v-card__image .v-img__img {
+  position: fixed;
 }
 </style>

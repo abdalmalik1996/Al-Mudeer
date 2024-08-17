@@ -1,7 +1,7 @@
 <template>
   <v-card
-    width="300"
-    height="613"
+    width="250"
+    height="550"
     class="d-flex flex-column justify-end"
     color="transparent"
     variant="text"
@@ -11,18 +11,18 @@
         <v-card
           variant="flat"
           width="300"
-          height="400"
+          height="350"
           color="transparent"
           class="d-flex align-end rounded-0 cursor-pointer"
           v-bind="props"
-          :style="isHovering ? 'transform: scale(1.3) translateY(-40px);' : ''"
+          :style="isHovering ? 'transform: scale(1.2) translateY(-40px);' : ''"
           style="transition: 0.5s"
         >
           <v-img :src="item.img"></v-img>
         </v-card>
         <v-card-title
           :style="isHovering ? 'opacity: 0.5;' : 'opacity: 0'"
-          class="text-center mt-2 test"
+          class="text-center mt-2"
         >
           <h4 class="text-h5 text-capitalize text-white">{{ item?.title }}</h4>
         </v-card-title>

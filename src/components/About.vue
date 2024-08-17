@@ -9,7 +9,7 @@
         <v-col cols="11">
           <v-card variant="flat" color="transparent" class="py-9">
             <v-card-title class="text-center py-15">
-              <h4 class="text-h3 text-white font-weight-bold">
+              <h4 class="text-h4 text-white font-weight-bold">
                 About <span style="color: #4682b4">Company</span>
               </h4>
             </v-card-title>
@@ -18,7 +18,7 @@
                 <v-card
                   v-for="(item, index) in items"
                   :key="index"
-                  class="mb-4 py-4 text-white"
+                  class="mb-3 py-1 text-white"
                   variant="text"
                 >
                   <!-- <v-card-title>
@@ -27,7 +27,7 @@
                     </h5>
                   </v-card-title> -->
                   <v-card-subtitle style="opacity: 1" class="w-75 text-wrap">
-                    <p class="text-h5 font-weight-regular">
+                    <p class="text-body-1 font-weight-regular">
                       {{ item.content }}
                     </p>
                   </v-card-subtitle>

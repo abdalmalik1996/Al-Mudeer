@@ -14,10 +14,10 @@
       "
     >
       <v-card-title class="text-center">
-        <h4 class="text-h3 font-weight-bold">Our Partner</h4>
+        <h4 class="text-h4 font-weight-bold">Our Partner</h4>
       </v-card-title>
       <v-card-subtitle class="text-center" style="opacity: 1">
-        <p class="text-h6">Strategic Partners</p>
+        <p class="text-body-1">Strategic Partners</p>
       </v-card-subtitle>
       <v-row justify="center">
         <v-col cols="12">

@@ -15,7 +15,7 @@
         <v-img
           width="100%"
           :height="214"
-          :src="`/img/Certificate/${item.img}.png`"
+          :src="`/img/Certificate/${item.img}.webp`"
         >
           <template v-slot:placeholder>
             <div class="d-flex align-center justify-center fill-height">
@@ -40,7 +40,7 @@
           icon="mdi-close"
           @click="dialog = false"
         ></v-btn>
-        <v-img :src="`/img/Certificate/${item.img}.png`" />
+        <v-img :src="`/img/Certificate/${item.img}.webp`" />
       </v-dialog>
     </template>
   </v-hover>

@@ -13,12 +13,12 @@
       <v-row justify="end" class="ma-0">
         <v-col cols="12" md="6" class="d-flex align-center">
           <v-card variant="text">
-            <v-card-title class="py-9">
-              <h4 class="text-h3 font-weight-bold">Who’s Al Mudeer</h4>
+            <v-card-title class="py-5">
+              <h4 class="text-h4 font-weight-bold">Who’s Al Mudeer</h4>
             </v-card-title>
             <v-card-subtitle class="text-wrap" style="opacity: 1">
-              <p class="text-h6 font-weight-light mb-10">
-                <span class="text-h5 text-white font-weight-bold"
+              <p class="text-body-1 font-weight-light mb-7">
+                <span class="text-h6 text-white font-weight-bold"
                   >Al Mudeer Company </span
                 >was established in 2011 to provide exceptional administrative
                 services to owners’ associations. Since its inception, it has
@@ -31,8 +31,8 @@
                 real estate excellence without dispute for seven consecutive
                 years in Sharjah.
               </p>
-              <p class="text-h6 font-weight-light mb-10">
-                <span class="text-h5 text-white font-weight-bold">
+              <p class="text-body-1 font-weight-light mb-7">
+                <span class="text-h6 text-white font-weight-bold">
                   Al Mudeer
                 </span>
                 currently manages over 42 active projects in the UAE and has
@@ -41,8 +41,8 @@
                 wide range of projects and consistently exceeded client
                 expectations.
               </p>
-              <p class="text-h6 font-weight-light mb-10">
-                <span class="text-h5 text-white font-weight-bold">
+              <p class="text-body-1 font-weight-light mb-7">
+                <span class="text-h6 text-white font-weight-bold">
                   Our extensive experience,
                 </span>
                 in-depth market knowledge and the breadth of our operations make
@@ -79,6 +79,12 @@
                 md="3"
                 v-for="(item, index) in itemsCounter"
                 :key="index"
+                v-intersect="{
+                  handler: onIntersect,
+                  options: {
+                    threshold: [0, 0.5, 1.0],
+                  },
+                }"
               >
                 <v-card
                   variant="text"
@@ -91,7 +97,17 @@
                   ></v-img>
                   <v-card-title>
                     <h5 class="text-h4 text-md-h4 font-weight-bold">
-                      {{ item.number }}
+                      <vue3-autocounter
+                        ref="counter"
+                        :startAmount="0"
+                        :endAmount="item.number"
+                        :duration="4"
+                        :prefix="item.prefix"
+                        :suffix="item.suffix"
+                        :decimals="item.decimals"
+                        :decimalSeparator="item.decimalSeparator"
+                        :autoinit="false"
+                      />
                     </h5>
                   </v-card-title>
                   <v-card-subtitle
@@ -119,31 +135,65 @@
 <script setup>
 import { useDisplay } from "vuetify";
 import Company from "@/components/Company.vue";
+import { watch, ref } from "vue";
 
 const { smAndUp, mdAndUp } = useDisplay();
-import CertificateCard from "./CertificateCard.vue";
+const isIntersecting = ref(false);
+const counter = ref(null);
+const show = ref(false);
 const itemsCounter = [
   {
     title: "Value Of managed assets",
-    number: "5.2 B",
+    number: 5.2,
     icon: "Value",
+    suffix: "B",
+    prefix: "",
+    decimalSeparator: "",
+    decimals: "1",
   },
   {
     title: "Employees Under Al-Mudeer Managment",
-    number: "+ 400",
+    number: 400,
+    prefix: "+ ",
+    suffix: "",
     icon: "Employees",
+    decimalSeparator: "",
+    decimals: "0",
   },
   {
     title: "Units Under Al-Mudeer Managment",
-    number: "+ 15 K",
+    number: 15,
+    prefix: "+ ",
+    suffix: " K",
     icon: "Units",
+    decimalSeparator: "",
+    decimals: "0",
   },
   {
     title: "AL-Mudeer Projects",
-    number: "+ 50",
-    icon: "MudeerProjects",
+    number: 50,
+    prefix: "+ ",
+    suffix: "",
+    icon: "Units",
+    decimalSeparator: "",
+    decimals: "0",
   },
 ];
+function onIntersect(intersecting, entries, observer) {
+  isIntersecting.value = intersecting;
+}
+watch(
+  () => isIntersecting.value,
+  () => {
+    if (!show.value && isIntersecting.value === true) {
+      // Start each counter
+      counter.value.forEach((counterRef) => {
+        counterRef.start();
+      });
+      show.value = true;
+    }
+  }
+);
 </script>
 
 <style scoped></style>

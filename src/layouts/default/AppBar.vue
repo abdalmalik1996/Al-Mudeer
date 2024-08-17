@@ -1,14 +1,14 @@
 <template>
   <v-toolbar
     style="position: absolute; top: 0; z-index: 9999"
-    class="px-16 decore-bac"
+    class="px-5 decore-bac"
     color="transparent"
     flat
     height="100"
   >
     <v-row justify="center">
       <v-col cols="12" class="d-flex">
-        <v-img height="48" max-width="84" src="/logo-white.svg" />
+        <v-img height="4vh" max-width="84" src="/logo-white.svg" />
         <v-spacer />
         <template #append></template>
         <v-app-bar-nav-icon
@@ -20,7 +20,7 @@
           <VBtnToggle mandatory v-model="value">
             <VBtn
               variant="text"
-              class="text-white"
+              class="text-white text-body-1"
               v-for="(item, i) in items"
               :key="i"
               flat
@@ -32,8 +32,8 @@
               <template v-slot:prepend>
                 <v-icon>
                   <v-img
-                    width="50"
-                    height="50"
+                    width="40"
+                    height="40"
                     :src="`/icon/${item.icon}.svg`"
                   ></v-img>
                 </v-icon>

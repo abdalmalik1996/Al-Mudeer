@@ -1,14 +1,15 @@
 <template>
   <v-card color="transparent" lass="rounded-0">
     <v-card
-      class="py-16 text-white rounded-0"
+      class="py-5 text-white rounded-0"
       :style="
         mdAndUp
           ? 'padding-top: 150px !important '
           : 'padding-top: 320px !important'
       "
       color="transparent"
-      style="
+    >
+      <!-- style="
         background: linear-gradient(
             180deg,
             rgba(57, 23, 18, 0.3) 21.5%,
@@ -20,12 +21,13 @@
             rgba(192, 122, 120, 0.4)
           ),
           linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
-      "
-    >
+      " -->
       <v-row class="ma-0" justify="center">
         <v-col cols="11">
           <v-card-title class="text-center">
-            <h4 class="text-h3 font-weight-bold">Our Departments</h4>
+            <h4 class="text-h4 font-weight-bold" style="color: #090f13">
+              Our Departments
+            </h4>
           </v-card-title>
           <!-- <v-card-subtitle
             class="text-center mt-2"
@@ -38,14 +40,14 @@
           </v-card-subtitle> -->
           <v-sheet
             color="transparent"
-            class="d-flex flex-wrap justify-center ga-10 py-16 align-center"
-            style="min-height: 600px !important"
+            class="d-flex flex-wrap justify-center ga-10 py-4 align-center"
+            style="min-height: 550px !important"
           >
             <v-card
               variant="flat"
               color="transparent"
               v-for="(item, index) in items"
-              data-aos="fade-up"
+              data-aos="zoom-in"
               :data-aos-delay="index * 2 + '00'"
               :key="index"
             >

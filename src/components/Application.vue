@@ -1,6 +1,6 @@
 <template>
   <v-card
-    class="pa-0 ma-0 text-white py-15 rounded-0"
+    class="pa-0 ma-0 text-white py-8 rounded-0"
     variant="flat"
     image="@/assets/img/Application-bac.png"
     min-hight="100vh"
@@ -8,68 +8,70 @@
     <v-row justify="center">
       <v-col cols="12">
         <v-card-title class="text-center">
-          <h4 class="text-h3 font-weight-bold">Our Application</h4>
+          <h4 class="text-h4 font-weight-bold">Our Application</h4>
         </v-card-title>
         <v-card-subtitle style="opacity: 1" class="text-center">
-          <p class="text-h5 font-weight-medium">Features of al-mudeer app</p>
+          <p class="text-body-1 font-weight-medium">
+            Features of al-mudeer app
+          </p>
         </v-card-subtitle>
       </v-col>
       <v-col cols="11">
-        <v-row>
+        <v-row justify="center">
           <v-col cols="12" md="4" class="pl-0 d-flex align-center">
             <v-list bg-color="transparent" class="pl-0">
               <v-list-item
-                class="py-5 pl-0"
+                class="py-1 pl-0"
                 v-for="(item, index) in itemsLeft"
                 :key="index"
               >
-                <v-list-item-title class="text-end"
+                <v-list-item-title class="text-end py-0"
                   ><h4
-                    class="text-h5 font-weight-bold pb-3"
-                    style="color: #4682b4; border-bottom: 1px solid white"
+                    class="text-h6 font-weight-bold pb-0"
+                    style="color: #61312a; border-bottom: 1px solid white"
                   >
                     {{ item.title }}
                   </h4></v-list-item-title
                 >
                 <v-list-item-text class="">
-                  <p class="mt-3 text-h6">
+                  <p class="mt-1 text-body-1">
                     {{ item.text }}
                   </p>
                 </v-list-item-text>
                 <template v-slot:append>
-                  <v-icon size="60">
-                    <v-img :src="`/icon/${item.icon}.svg`"></v-img>
+                  <v-icon size="35">
+                    <v-img :src="`/img/app/${item.icon}.png`"></v-img>
                   </v-icon>
                 </template>
               </v-list-item>
             </v-list>
           </v-col>
-          <v-col cols="12" md="4" class="d-flex align-center">
+          <v-col cols="12" md="3" class="d-flex align-center">
             <v-img src="@/assets/img/phone.png" height="60vh"></v-img>
           </v-col>
           <v-col cols="12" md="4" class="d-flex align-center">
             <v-list bg-color="transparent" class="pl-0">
               <v-list-item
-                class="py-5 pl-0"
+                class="py-1 pl-0"
                 v-for="(item, index) in itemsRight"
                 :key="index"
               >
-                <v-list-item-title class="text-start"
+                <v-list-item-title class="text-start py-0"
                   ><h4
-                    class="text-h5 font-weight-bold pb-3"
-                    style="color: #4682b4; border-bottom: 1px solid white"
+                    class="text-h6 font-weight-bold pb-0"
+                    style="color: #61312a; border-bottom: 1px solid white"
                   >
                     {{ item.title }}
                   </h4></v-list-item-title
                 >
                 <v-list-item-text class="">
-                  <p class="mt-3 text-h6">
+                  <p class="mt-1 text-body-1">
                     {{ item.text }}
                   </p>
                 </v-list-item-text>
                 <template v-slot:prepend>
                   <v-icon size="60">
-                    <v-img :src="`/icon/${item.icon}.svg`"></v-img>
+                    <v-img :src="`/img/app/${item.icon}.png`"></v-img>
                   </v-icon>
                 </template>
               </v-list-item>
@@ -84,42 +86,52 @@
 <script setup>
 const itemsLeft = [
   {
-    title: "Design",
-    text: "Stunning design that suits the nature of the work",
+    title: "Service Charge",
+    text: "Owners will pay their service charge through this Application.",
     icon: "design",
   },
   {
-    title: "Ease of Use ",
-    text: "Ease of use for all segments of society",
-    icon: "touch",
+    title: "Daily help",
+    text: "Users will contact all the nearby daily help vendors and avail their offers through our application.",
+    icon: "help",
   },
 
   {
-    title: "Real Time",
-    text: "Instant and real-time tracking feature for your property",
+    title: "Product",
+    text: "User will see different product and can purchase this product through our application at very low prices.",
     icon: "Time",
   },
   {
-    title: "Live Update",
-    text: "Live update of all property events to follow them moment by moment",
+    title: "Services",
+    text: "User will see different services like (Plumber, electrician, cleaner, etc.) and book these vendors through our application.",
     icon: "LiveUpdate",
   },
 ];
 const itemsRight = [
   {
-    title: "Pay",
-    text: "Ability to pay your financial obligations with the click of a button",
+    title: "Buy and sell",
+    text: "These features allow all the users to buy and sell used or unused product within their tower.",
     icon: "Pay",
   },
   {
-    title: "Laws and Regulations",
-    text: "Review all new laws and regulations regulating the property",
-    icon: "LawsAndRegulations",
+    title: "Social Groups",
+    text: "Create custom groups for functions, hobbies, and others.",
+    icon: "groups",
   },
   {
-    title: "Live Chat",
-    text: "Live chat service to answer any inquiry or submit any complaint",
-    icon: "Chat",
+    title: "Invite guest",
+    text: "Can invite guest/groups using phonebook. you can send a “invitation card” via WhatsApp.",
+    icon: "invite",
+  },
+  {
+    title: "Common Facilities",
+    text: "Configure a list amenities/facilities like clubhouse, swimming pool, gym, etc. in a society.",
+    icon: "",
+  },
+  {
+    title: "Helpdesk",
+    text: "Resident can log complaint choosing category, sub-category, type, etc. Residents can provide description and attach photos of issues.",
+    icon: "helpdesk",
   },
 ];
 </script>
