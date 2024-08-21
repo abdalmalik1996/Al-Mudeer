@@ -32,12 +32,15 @@
                   Our Office <span style="color: #a52a2a">Info</span>
                 </h4>
               </v-card-title>
-              <v-list bg-color="transparent">
+              <v-list bg-color="transparent" style="height: auto !important">
                 <v-list-item
                   class="mb-3 rounded-lg pa-3"
                   v-for="(item, index) in items"
                   :key="index"
                   style="background-color: rgba(255, 255, 255, 0.1)"
+                  data-aos="fade-down-right"
+                  data-aos-anchor-placement="top-bottom"
+                  :data-aos-delay="index * 2 + '00'"
                 >
                   <v-list-item-title>
                     <h4 class="text-body-1 font-weight-bold">
@@ -65,6 +68,9 @@
                   size="56"
                   href="https://www.facebook.com/AlMudeerOAM"
                   target="_blank"
+                  data-aos="fade-down-right"
+                  data-aos-anchor-placement="top-bottom"
+                  data-aos-delay="1000"
                 ></v-btn>
 
                 <v-btn
@@ -74,6 +80,9 @@
                   size="56"
                   href="https://www.instagram.com/almudeeroam/"
                   target="_blank"
+                  data-aos="fade-down-right"
+                  data-aos-anchor-placement="top-bottom"
+                  data-aos-delay="2000"
                 ></v-btn>
                 <v-btn
                   style="background-color: rgba(255, 255, 255, 0.1)"
@@ -82,6 +91,9 @@
                   size="56"
                   href="https://www.linkedin.com/company/al-mudeer-owners-association-management-services"
                   target="_blank"
+                  data-aos="fade-down-right"
+                  data-aos-anchor-placement="top-bottom"
+                  data-aos-delay="3000"
                 ></v-btn>
               </v-card-actions>
               <!-- <v-card-text class="pl-0">
@@ -96,6 +108,8 @@
               <v-card
                 class="pa-5 w-100 h-100 text-white d-flex align-center"
                 style="background-color: rgba(255, 255, 255, 0.1)"
+                data-aos="zoom-in"
+                data-aos-duration="3000"
               >
                 <v-form class="w-100">
                   <div class="mb-2 pl-1">

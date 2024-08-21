@@ -18,7 +18,16 @@
           :style="isHovering ? 'transform: scale(1.2) translateY(-40px);' : ''"
           style="transition: 0.5s"
         >
-          <v-img :src="item.img"></v-img>
+          <v-img :src="item?.img">
+            <!-- <template v-slot:placeholder>
+              <v-skeleton-loader
+                class="mx-auto border"
+                height="350"
+                color="#a52a2a45"
+                theme="image"
+              ></v-skeleton-loader>
+            </template> -->
+          </v-img>
         </v-card>
         <v-card-title
           :style="isHovering ? 'opacity: 0.5;' : 'opacity: 0'"

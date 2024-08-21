@@ -90,6 +90,6 @@ const itemsCertificate = [
 <style scoped>
 swiper-container::part(button-prev),
 swiper-container::part(button-next) {
-  color: #a52a2a !important;
+  color: #dedede !important;
 }
 </style>

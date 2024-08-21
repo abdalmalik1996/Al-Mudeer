@@ -47,7 +47,12 @@
             </v-list>
           </v-col>
           <v-col cols="12" md="3" class="d-flex align-center">
-            <v-img src="@/assets/img/phone.png" height="60vh"></v-img>
+            <v-img
+              data-aos="flip-left"
+              data-aos-duration="3000"
+              src="@/assets/img/phone.png"
+              height="60vh"
+            ></v-img>
           </v-col>
           <v-col cols="12" md="4" class="d-flex align-center">
             <v-list bg-color="transparent" class="pl-0">
@@ -84,6 +89,8 @@
 </template>
 
 <script setup>
+import Aos from "aos";
+import "aos/dist/aos.css";
 const itemsLeft = [
   {
     title: "Service Charge",

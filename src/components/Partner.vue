@@ -29,14 +29,27 @@
               navigation="true"
             >
               <swiper-slide
-                v-for="n in 15"
+                v-for="n in 8"
                 :key="n"
                 :style="smAndUp ? 'width : 300px' : '50%'"
                 class="d-flex justify-center"
               >
-                <v-card class="pa-5" width="300" variant="text">
-                  <v-img :height="300" :src="`/img/Partner/${n}.png`"></v-img>
-                </v-card>
+                <v-hover>
+                  <template v-slot="{ isHovering, props }">
+                    <v-card
+                      v-bind="props"
+                      class="pa-5 cursor-pointer"
+                      width="300"
+                      variant="text"
+                    >
+                      <v-img
+                        :style="isHovering ? 'transform: scale(1.1)' : ''"
+                        style="transition: 1s"
+                        :height="300"
+                        :src="`/img/Partner/${n}.png`"
+                      ></v-img> </v-card
+                  ></template>
+                </v-hover>
               </swiper-slide>
             </swiper-container>
           </v-sheet>
@@ -86,6 +99,6 @@ const { smAndUp, mdAndUp } = useDisplay();
 <style scoped>
 swiper-container::part(button-prev),
 swiper-container::part(button-next) {
-  color: #a52a2a !important;
+  color: #dede !important;
 }
 </style>
