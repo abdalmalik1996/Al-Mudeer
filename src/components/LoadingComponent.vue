@@ -1,26 +1,25 @@
 <template>
-   <section class="Container-loader">
+  <v-card  class="Container-loader">
         <img class="logo-spinner" src="/logo-white.svg" alt="">
         <div class="half-circle-spinner">
           <div class="circle circle-1"></div>
           <div class="circle circle-2"></div>
         </div>
-      </section>
+  </v-card>
 </template>
-
-
-
-<style >
+<script setup></script>
+<style scoped>
   .Container-loader{
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(9, 15, 19);;
-    height: 100vh;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background-color: #1b1b1b !important;
+    height: 100vh !important;
+    width: 100vw !important;
+    z-index: 9999 !important;
   }
 .logo-spinner{
-  position: absolute;
+  position: absolute !important;
 }
   .half-circle-spinner,
   .half-circle-spinner * {

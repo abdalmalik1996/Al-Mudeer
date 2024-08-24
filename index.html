@@ -1,20 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="/logo.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <title>Al-Mudeer</title>
-  </head>
-
-  <body>
-    <div id="app" >
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/logo-white.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+  <title>Al-Mudeer</title>
+  <style>
+    .Container-loader {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #000; /* أو أي لون تريده */
+    }
+    /* أنماط أخرى إذا لزم الأمر */
+  </style>
+</head>
+<body>
+  <div class="Container-loader" id="loader">
+    <img class="logo-spinner" src="/logo-white.svg" alt="">
+    <div class="half-circle-spinner">
+      <div class="circle circle-1"></div>
+      <div class="circle circle-2"></div>
+    </div>
+  </div>
+  <script type="module">
+    // إنشاء عنصر div جديد
+    const appDiv = document.createElement('div');
+    appDiv.id = 'app';
+    appDiv.innerHTML = `
       <section class="Container-loader">
         <img class="logo-spinner" src="/logo-white.svg" alt="">
         <div class="half-circle-spinner">
@@ -22,10 +42,24 @@
           <div class="circle circle-2"></div>
         </div>
       </section>
-    </div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+    `;
+
+    appDiv.style.display = 'none';
+    document.body.appendChild(appDiv);
+
+    setTimeout(() => {
+      document.getElementById('loader').style.display = 'none'; 
+      appDiv.style.display = 'block'; 
+
+      const script = document.createElement('script');
+      script.type = 'module';
+      script.src = '/src/main.js';
+      document.body.appendChild(script);
+    }, 4000); 
+  </script>
+</body>
 </html>
+
 
 <style>
   
