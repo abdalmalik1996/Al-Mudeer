@@ -147,6 +147,9 @@
 </template>
 
 <script setup>
+import Aos from "aos";
+import "aos/dist/aos.css";
+Aos.init();
 const items = [
   {
     title: "You can email us here",
