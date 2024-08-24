@@ -2,7 +2,7 @@
 import vue from '@vitejs/plugin-vue'
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 import ViteFonts from 'unplugin-fonts/vite'
-
+import { VitePWA } from 'vite-plugin-pwa'
 // Utilities
 import { defineConfig } from 'vite'
 import { fileURLToPath, URL } from 'node:url'
@@ -12,6 +12,9 @@ export default defineConfig({
   plugins: [
     vue({
       template: { transformAssetUrls }
+    }),
+    VitePWA({
+      registerType: 'autoUpdate'
     }),
     // https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin
     vuetify({
