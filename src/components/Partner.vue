@@ -1,7 +1,7 @@
 <template>
   <v-card color="transparent" class="rounded-0">
     <v-card
-      class="text-white py-15"
+      class="text-white py-9"
       min-height="100vh"
       color="transparent"
       style="
@@ -23,7 +23,7 @@
         <v-col cols="12">
           <v-sheet color="transparent">
             <swiper-container
-              class="mt-10 d-flex align-center justify-center"
+              class="mt-2 d-flex align-center justify-center"
               :slides-per-view="mdAndUp ? 4 : 'auto'"
               :spaceBetween="20"
               navigation="true"
@@ -31,7 +31,7 @@
               <swiper-slide
                 v-for="n in 8"
                 :key="n"
-                :style="smAndUp ? 'width : 300px' : '50%'"
+                :style="smAndUp ? 'width : 250px' : '50%'"
                 class="d-flex justify-center"
               >
                 <v-hover>
@@ -39,13 +39,13 @@
                     <v-card
                       v-bind="props"
                       class="pa-5 cursor-pointer"
-                      width="300"
+                      width="250"
                       variant="text"
                     >
                       <v-img
                         :style="isHovering ? 'transform: scale(1.1)' : ''"
                         style="transition: 1s"
-                        :height="300"
+                        :height="200"
                         :src="`/img/Partner/${n}.png`"
                       ></v-img> </v-card
                   ></template>
@@ -56,12 +56,12 @@
         </v-col>
         <v-col cols="10">
           <v-card-title class="text-center">
-            <h3 class="text-h4 font-weight-medium">Trusted By</h3>
+            <h3 class="text-h4 font-weight-bold">Trusted By</h3>
           </v-card-title>
-          <v-sheet color="transparent" class="d-flex">
+          <v-sheet color="transparent" class="d-flex justify-center">
             <v-card
               class="pa-5"
-              width="300"
+              width="250"
               variant="text"
               v-for="n in 5"
               :key="n"
@@ -70,7 +70,7 @@
                 <template v-slot="{ isHovering, props }">
                   <v-img
                     class="filter_white cursor-pointer"
-                    :height="300"
+                    :height="250"
                     :src="
                       isHovering
                         ? `/img/trustedby/${n}.png`

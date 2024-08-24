@@ -93,7 +93,7 @@
                   <v-img
                     width="85"
                     :height="85"
-                    :src="`/icon/${item.icon}.svg`"
+                    :src="`/icon/${item.icon}`"
                   ></v-img>
                   <v-card-title>
                     <h5 class="text-h4 text-md-h4 font-weight-bold">
@@ -130,6 +130,7 @@
     </v-card>
     <Company />
   </v-sheet>
+
 </template>
 
 <script setup>
@@ -145,10 +146,10 @@ const itemsCounter = [
   {
     title: "Value Of managed assets",
     number: 5.2,
-    icon: "Value",
+    icon: "Value.svg",
     suffix: "B",
     prefix: "",
-    decimalSeparator: "",
+    decimalSeparator: ".",
     decimals: "1",
   },
   {
@@ -156,7 +157,7 @@ const itemsCounter = [
     number: 400,
     prefix: "+ ",
     suffix: "",
-    icon: "Employees",
+    icon: "Employees.svg",
     decimalSeparator: "",
     decimals: "0",
   },
@@ -165,7 +166,7 @@ const itemsCounter = [
     number: 15,
     prefix: "+ ",
     suffix: " K",
-    icon: "Units",
+    icon: "Units.svg",
     decimalSeparator: "",
     decimals: "0",
   },
@@ -174,7 +175,7 @@ const itemsCounter = [
     number: 40,
     prefix: "+ ",
     suffix: "",
-    icon: "Units",
+    icon: "house.svg",
     decimalSeparator: "",
     decimals: "0",
   },

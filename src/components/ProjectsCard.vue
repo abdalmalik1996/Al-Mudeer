@@ -10,7 +10,7 @@
       <template v-slot="{ isHovering, props }">
         <v-card
           variant="flat"
-          width="300"
+          width="250"
           height="350"
           color="transparent"
           class="d-flex align-end rounded-0 cursor-pointer"
@@ -18,7 +18,7 @@
           :style="isHovering ? 'transform: scale(1.2) translateY(-40px);' : ''"
           style="transition: 0.5s"
         >
-          <v-img :src="item?.img">
+          <v-img width="250"  :src="item?.img">
             <!-- <template v-slot:placeholder>
               <v-skeleton-loader
                 class="mx-auto border"

@@ -22,4 +22,5 @@ import AboutCompany from "@/components/AboutCompany.vue";
 import Partner from "@/components/Partner.vue";
 import Connect from "@/components/Connect.vue";
 import Certificate from "@/components/Certificate.vue";
+
 </script>

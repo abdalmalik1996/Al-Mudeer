@@ -5,7 +5,7 @@
         variant="flat"
         color="#303c4359"
         class="pa-5 text-white d-flex flex-column align-center rounded-xl cursor-pointer"
-        width="345"
+        width="300"
         height="350"
         v-bind="props"
         :style="isHovering ? 'transform : scale(0.99) ' : ''"

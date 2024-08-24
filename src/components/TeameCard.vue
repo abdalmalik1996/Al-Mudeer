@@ -27,7 +27,7 @@
         </v-avatar>
       </div>
 
-      <div style="margin-top: 80px" class="">
+      <div style="margin-top: 80px" class="d-flex  flex-column  justify-space-around  h-75">
         <v-card-title class="text-center"
           ><h5 style="font-size: 24px" class="font-weight-medium">
             {{ team?.name }}
@@ -46,11 +46,11 @@
             "{{ team?.text }}"
           </p>
         </v-card-subtitle>
-        <v-card variant="flat" class="mt-10">
+        <v-card-title variant="flat" class=" justify-self-end  w-100">
           <a :href="team?.linkedin" target="_blank">
             <v-img :height="30" src="@/assets/icon/linkedin.svg"></v-img>
           </a>
-        </v-card>
+        </v-card-title>
       </div>
     </v-card>
   </v-card>

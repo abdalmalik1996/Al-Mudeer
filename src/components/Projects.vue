@@ -12,12 +12,12 @@
           <v-card-title class="text-center">
             <h4 class="text-h4 font-weight-bold">Our Projects</h4>
           </v-card-title>
-          <v-card-subtitle style="opacity: 1" class="text-center mt-4">
+          <!-- <v-card-subtitle style="opacity: 1" class="text-center mt-4">
             <p class="text-body-1 font-weight-medium">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
               It has
             </p>
-          </v-card-subtitle>
+          </v-card-subtitle> -->
           <v-sheet color="transparent" class="ga-10">
             <swiper-container
               class="mt-5 d-flex align-end justify-center"

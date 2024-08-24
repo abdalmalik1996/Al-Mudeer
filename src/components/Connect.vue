@@ -16,7 +16,8 @@
               Let’s <span style="color: #a52a2a"> Connect </span>
             </h3>
           </v-card-title>
-          <v-card-subtitle
+
+          <!-- <v-card-subtitle
             class="text-center d-flex justify-center mt-2"
             style="opacity: 1"
           >
@@ -24,7 +25,7 @@
               Contrary to popular belief, Lorem Ipsum is not simply random text.
               It has roots in a piece of classical Latin literature from 45 BC
             </p>
-          </v-card-subtitle>
+          </v-card-subtitle> -->
           <v-row justify="space-between" class="ma-0 py-9">
             <v-col cols="12" md="6">
               <v-card-title class="pl-0 pb-3">
@@ -149,7 +150,6 @@
 <script setup>
 import Aos from "aos";
 import "aos/dist/aos.css";
-Aos.init();
 const items = [
   {
     title: "You can email us here",

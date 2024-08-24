@@ -10,7 +10,7 @@
           <v-card variant="flat" color="transparent" class="py-9">
             <v-card-title class="text-center py-15">
               <h4 class="text-h4 text-white font-weight-bold">
-                About <span style="color: #61312a">Company</span>
+                About Company
               </h4>
             </v-card-title>
             <v-row class="ma-0">

@@ -8,7 +8,7 @@
     >
       <v-row justify="center" class="ma-0">
         <v-col cols="11">
-          <v-card-title class="text-center text-h3"
+          <v-card-title class="text-center text-h4"
             ><h4>The Executive Team</h4>
           </v-card-title>
           <!-- <v-card-subtitle class="text-center text-h5" style="opacity: 1">

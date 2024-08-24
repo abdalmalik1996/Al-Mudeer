@@ -62,8 +62,8 @@
 import CompanyCard from "./CompanyCard.vue";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { useDisplay } from "vuetify/lib/framework.mjs";
 Aos.init();
+import { useDisplay } from "vuetify/lib/framework.mjs";
 const { mdAndUp } = useDisplay();
 const items = [
   {
@@ -88,7 +88,7 @@ const items = [
     des: "Range of disciplines to ensure functionality, comfort, safety, and efficiency of the built environment by integrating people, place, process, and technology.",
   },
   {
-    imgBac: "/img/company/4.webp",
+    imgBac: "/img/company/it-2.png",
     img: "/4.webp",
     icon: "/img/company/IT.png",
     title: "IT SERVICES",

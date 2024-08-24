@@ -2,8 +2,10 @@
   <v-card
     class="pa-0 ma-0 text-white py-8 rounded-0"
     variant="flat"
-    image="@/assets/img/Application-bac-1.jpg"
+    image="@/assets/img/Application-bac.png"
     min-hight="100vh"
+    style="background: rgba(7, 5, 15, 0.8)"
+
   >
     <v-row justify="center">
       <v-col cols="12">
@@ -39,8 +41,8 @@
                   </p>
                 </v-list-item-text>
                 <template v-slot:append>
-                  <v-icon size="35">
-                    <v-img :src="`/img/app/${item.icon}.png`"></v-img>
+                  <v-icon size="50">
+                    <v-img  :src="`/img/app/${item.icon}.png`"></v-img>
                   </v-icon>
                 </template>
               </v-list-item>
@@ -96,7 +98,7 @@ const itemsLeft = [
   {
     title: "Service Charge",
     text: "Owners will pay their service charge through this Application.",
-    icon: "design",
+    icon: "ServiceCharge",
   },
   {
     title: "Daily help",
@@ -107,34 +109,34 @@ const itemsLeft = [
   {
     title: "Product",
     text: "User will see different product and can purchase this product through our application at very low prices.",
-    icon: "Time",
+    icon: "market",
   },
   {
     title: "Services",
     text: "User will see different services like (Plumber, electrician, cleaner, etc.) and book these vendors through our application.",
-    icon: "LiveUpdate",
+    icon: "Services",
   },
 ];
 const itemsRight = [
   {
     title: "Buy and sell",
     text: "These features allow all the users to buy and sell used or unused product within their tower.",
-    icon: "Pay",
+    icon: "saleandbuy",
   },
   {
     title: "Social Groups",
     text: "Create custom groups for functions, hobbies, and others.",
-    icon: "groups",
+    icon: "SocialGroups",
   },
   {
     title: "Invite guest",
     text: "Can invite guest/groups using phonebook. you can send a “invitation card” via WhatsApp.",
-    icon: "invite",
+    icon: "inviteguest",
   },
   {
     title: "Common Facilities",
     text: "Configure a list amenities/facilities like clubhouse, swimming pool, gym, etc. in a society.",
-    icon: "",
+    icon: "Common",
   },
   {
     title: "Helpdesk",

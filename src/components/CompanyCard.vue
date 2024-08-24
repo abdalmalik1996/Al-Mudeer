@@ -13,15 +13,16 @@
         <v-avatar
           size="160"
           :color="isHovering ? 'transparent' : 'transparent'"
-          :style="isHovering ? 'transform: translateY(100px)' : ''"
+          :style="isHovering ? 'transform: translateY(50px)' : ''"
           class="flex-column pa-0 transition"
+
         >
-          <div v-if="!isHovering" style="height: 60px; width: 104px">
+          <!-- <div v-if="!isHovering" style="height: 60px; width: 104px">
             <v-img src="/icon/logo-company.svg"></v-img>
-          </div>
-          <div v-if="isHovering" style="height: 60px; width: 104px">
+          </div> -->
+          <div  style="height: 60px; width: 104px">
             <v-img
-              :style="isHovering ? 'transform : scale(2)' : ''"
+              style="transform : scale(1.5)"
               :src="item?.icon"
             ></v-img>
           </div>
@@ -53,14 +54,14 @@
         </div>
         <div
           v-if="isHovering"
-          :style="isHovering ? 'transform: translateY(110px)' : ''"
+          :style="isHovering ? 'transform: translateY(10px)' : ''"
         >
-          <v-card-title class="text-center">
-            <h6 class="text-h2 font-weight-bold">+ 120</h6>
+          <v-card-title class="text-center px-0">
+            <h6 class="text-body-1 text-wrap">{{ item.des }}</h6>
           </v-card-title>
-          <v-card-subtitle style="opacity: 1" class="text-center">
-            <p class="text-body-1 font-weight-light">Properly</p>
-          </v-card-subtitle>
+          <!-- <v-card-subtitle style="opacity: 1" class="text-center">
+            <p class="text-body-1 font-weight-light">Property</p>
+          </v-card-subtitle> -->
         </div>
         <!-- <v-card-title class="align-self-start position-relative decore mt-8">
       <h6 class="text-h6" style="padding-left: 25px">Company Address</h6>
