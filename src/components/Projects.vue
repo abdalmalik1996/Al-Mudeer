@@ -8,7 +8,7 @@
       <!-- style="background: rgba(48, 60, 67, 0.6)" -->
 
       <v-row class="ma-0" justify="center">
-        <v-col cols="11" class="pb-0">
+        <v-col sm="9" cols="12" class="pb-0">
           <v-card-title class="text-center">
             <h4 class="text-h4 font-weight-bold">Our Projects</h4>
           </v-card-title>
@@ -22,13 +22,13 @@
             <swiper-container
               class="mt-5 d-flex align-end justify-center"
               slides-per-view="auto"
-              autoplay
+              :space-between="20"
             >
               <swiper-slide
                 v-for="(item, index) in items"
                 :key="index"
-                :style="smAndUp ? 'width : 250px' : '50%'"
-                class="d-flex justify-center"
+                :style="smAndUp ? 'width : 250px' : 'width :80%'"
+                class="d-flex justify-center "
               >
                 <v-card
                   data-aos="fade-up"

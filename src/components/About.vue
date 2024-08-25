@@ -8,13 +8,13 @@
       <v-row justify="center">
         <v-col cols="11">
           <v-card variant="flat" color="transparent" class="py-9">
-            <v-card-title class="text-center py-15">
+            <v-card-title class="text-center py-md-15 py-5">
               <h4 class="text-h4 text-white font-weight-bold">
                 About Company
               </h4>
             </v-card-title>
             <v-row class="ma-0">
-              <v-col>
+              <v-col cols="12" md="6" >
                 <v-card
                   v-for="(item, index) in items"
                   :key="index"
@@ -26,15 +26,15 @@
                       {{ item.title }}
                     </h5>
                   </v-card-title> -->
-                  <v-card-subtitle style="opacity: 1" class="w-75 text-wrap">
-                    <p class="text-body-1 font-weight-regular">
+                  <v-card-subtitle style="opacity: 1" class="text-wrap" :style="mdAndUp ? 'width : 75%' : 'width : 100%'">
+                    <p style="font-size: 18px;" class=" font-weight-regular">
                       {{ item.content }}
                     </p>
                   </v-card-subtitle>
                 </v-card>
               </v-col>
-              <v-col class="d-flex justify-center align-center">
-                <v-img :height="400" src="@/assets/icon/logo-almudeer.svg">
+              <v-col cols="12" md="6" class="d-flex justify-center align-center">
+                <v-img :height="250" src="@/assets/icon/logo-almudeer.svg">
                 </v-img>
               </v-col>
             </v-row>

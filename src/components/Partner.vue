@@ -24,7 +24,7 @@
           <v-sheet color="transparent">
             <swiper-container
               class="mt-2 d-flex align-center justify-center"
-              :slides-per-view="mdAndUp ? 4 : 'auto'"
+              :slides-per-view="mdAndUp ? 5 : 'auto'"
               :spaceBetween="20"
               navigation="true"
             >
@@ -45,7 +45,7 @@
                       <v-img
                         :style="isHovering ? 'transform: scale(1.1)' : ''"
                         style="transition: 1s"
-                        :height="200"
+                        :height="180"
                         :src="`/img/Partner/${n}.png`"
                       ></v-img> </v-card
                   ></template>
@@ -61,7 +61,7 @@
           <v-sheet color="transparent" class="d-flex justify-center">
             <v-card
               class="pa-5"
-              width="250"
+              width="200"
               variant="text"
               v-for="n in 5"
               :key="n"
@@ -70,7 +70,7 @@
                 <template v-slot="{ isHovering, props }">
                   <v-img
                     class="filter_white cursor-pointer"
-                    :height="250"
+                    :height="180"
                     :src="
                       isHovering
                         ? `/img/trustedby/${n}.png`

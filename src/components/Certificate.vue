@@ -14,7 +14,7 @@
             class="w-100 d-flex justify-center"
             style="opacity: 1"
           >
-            <p class="text-h6 text-wrap w-50 text-center">
+            <p class="text-h6 text-wrap  text-center" :style="mdAndUp ? 'width : 50%' : 'width : 100%'">
               With experience spanning more than 14 years, we are proud to share
               with you certificates that distinguish us as the best company in
               Sharjah for more than 8 consecutive years without dispute.
@@ -88,5 +88,6 @@ const itemsCertificate = [
 swiper-container::part(button-prev),
 swiper-container::part(button-next) {
   color: #dedede !important;
+  /* display: none */
 }
 </style>

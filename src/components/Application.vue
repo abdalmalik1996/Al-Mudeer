@@ -1,6 +1,6 @@
 <template>
   <v-card
-    class="pa-0 ma-0 text-white py-8 rounded-0"
+    class="pa-0 ma-0 text-white py-4 rounded-0"
     variant="flat"
     image="@/assets/img/Application-bac.png"
     min-hight="100vh"
@@ -21,9 +21,9 @@
       <v-col cols="11">
         <v-row justify="center">
           <v-col cols="12" md="4" class="pl-0 d-flex align-center">
-            <v-list bg-color="transparent" class="pl-0">
+            <v-list bg-color="transparent" class="pl-md-0 pl-3  ">
               <v-list-item
-                class="py-1 pl-0"
+                class="py-1 pl-0 px-0"
                 v-for="(item, index) in itemsLeft"
                 :key="index"
               >
@@ -77,7 +77,7 @@
                   </p>
                 </v-list-item-text>
                 <template v-slot:prepend>
-                  <v-icon size="60">
+                  <v-icon size="50">
                     <v-img :src="`/img/app/${item.icon}.png`"></v-img>
                   </v-icon>
                 </template>

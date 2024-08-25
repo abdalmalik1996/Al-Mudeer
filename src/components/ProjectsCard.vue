@@ -2,7 +2,7 @@
   <v-card
     width="250"
     height="550"
-    class="d-flex flex-column justify-end"
+    class="d-flex flex-column justify-end rounded-xl"
     color="transparent"
     variant="text"
   >
@@ -12,13 +12,13 @@
           variant="flat"
           width="250"
           height="350"
-          color="transparent"
-          class="d-flex align-end rounded-0 cursor-pointer"
+          class="d-flex align-end rounded-0 cursor-pointer rounded-lg overflow-visible"
           v-bind="props"
-          :style="isHovering ? 'transform: scale(1.2) translateY(-40px);' : ''"
+
           style="transition: 0.5s"
+          color="rgba(7, 5, 15, 0.8)"
         >
-          <v-img width="250"  :src="item?.img">
+          <v-img width="250"  :src="item?.img" :style="isHovering ? 'transform: scale(1.2) translateY(-40px);' : ''">
             <!-- <template v-slot:placeholder>
               <v-skeleton-loader
                 class="mx-auto border"

@@ -7,8 +7,8 @@
     height="100"
   >
     <v-row justify="center">
-      <v-col cols="10" class="d-flex">
-        <v-img height="4vh" max-width="84" src="/logo-white.svg" />
+      <v-col cols="10" class="d-flex align-center">
+        <v-img height="4vh" max-width="84" src="/logo.svg" />
         <v-spacer />
         <template #append></template>
         <v-app-bar-nav-icon
@@ -34,7 +34,7 @@
                   <v-img
                     width="40"
                     height="40"
-                    :src="`/icon/${item.icon}.svg`"
+                    :src="`/icon/${item.icon}`"
                   ></v-img>
                 </v-icon>
               </template>
@@ -53,19 +53,19 @@ const drawer = shallowRef(false);
 const items = [
   {
     text: "Real Estate",
-    icon: "RealEstate",
+    icon: "house-bar.png",
   },
   {
     text: "Projects",
-    icon: "Projects",
+    icon: "RealEstate.svg",
   },
   {
     text: "About Us",
-    icon: "About",
+    icon: "About.svg",
   },
   {
     text: "Cotact Us",
-    icon: "CotactUs",
+    icon: "CotactUs.svg",
   },
 ];
 const value = ref("");
