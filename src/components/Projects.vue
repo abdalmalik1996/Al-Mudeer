@@ -10,7 +10,9 @@
       <v-row class="ma-0" justify="center">
         <v-col sm="9" cols="12" class="pb-0">
           <v-card-title class="text-center">
-            <h4 class="text-h4 font-weight-bold">Our Projects</h4>
+            <h4 class="text-h4 font-weight-bold">
+              {{ $t("Projects.OurProjects") }}
+            </h4>
           </v-card-title>
           <!-- <v-card-subtitle style="opacity: 1" class="text-center mt-4">
             <p class="text-body-1 font-weight-medium">
@@ -28,7 +30,7 @@
                 v-for="(item, index) in items"
                 :key="index"
                 :style="smAndUp ? 'width : 250px' : 'width :80%'"
-                class="d-flex justify-center "
+                class="d-flex justify-center"
               >
                 <v-card
                   data-aos="fade-up"

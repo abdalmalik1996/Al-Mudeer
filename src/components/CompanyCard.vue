@@ -15,16 +15,12 @@
           :color="isHovering ? 'transparent' : 'transparent'"
           :style="isHovering ? 'transform: translateY(50px)' : ''"
           class="flex-column pa-0 transition"
-
         >
           <!-- <div v-if="!isHovering" style="height: 60px; width: 104px">
             <v-img src="/icon/logo-company.svg"></v-img>
           </div> -->
-          <div  style="height: 60px; width: 104px">
-            <v-img
-              style="transform : scale(1.5)"
-              :src="item?.icon"
-            ></v-img>
+          <div style="height: 60px; width: 104px">
+            <v-img style="transform: scale(1.5)" :src="item?.icon"></v-img>
           </div>
           <!-- <h6
             :class="isHovering ? 'mt-n3 ' : 'mt-3 '"
@@ -48,7 +44,7 @@
             class="pt-5 pb-9 text-center d-flex align-center justify-center text-wrap mt-5 w-100"
           >
             <h6 class="text-body-2 font-weight-medium">
-              {{ item?.title }}
+              {{ $t(`Departments.${item?.title}`) }}
             </h6>
           </v-card-title>
         </div>
@@ -57,7 +53,9 @@
           :style="isHovering ? 'transform: translateY(10px)' : ''"
         >
           <v-card-title class="text-center px-0">
-            <h6 class="text-body-1 text-wrap">{{ item.des }}</h6>
+            <h6 class="text-body-1 text-wrap">
+              {{ $t(`Departments.${item?.des}`) }}
+            </h6>
           </v-card-title>
           <!-- <v-card-subtitle style="opacity: 1" class="text-center">
             <p class="text-body-1 font-weight-light">Property</p>

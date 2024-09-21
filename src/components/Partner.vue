@@ -14,10 +14,12 @@
       "
     >
       <v-card-title class="text-center">
-        <h4 class="text-h4 font-weight-bold">Our Partner</h4>
+        <h4 class="text-h4 font-weight-bold">
+          {{ $t("Partner.OurPartner") }}
+        </h4>
       </v-card-title>
       <v-card-subtitle class="text-center" style="opacity: 1">
-        <p class="text-body-1">Strategic Partners</p>
+        <p class="text-body-1">{{ $t("Partner.StrategicPartners") }}</p>
       </v-card-subtitle>
       <v-row justify="center">
         <v-col cols="12">
@@ -56,7 +58,9 @@
         </v-col>
         <v-col cols="10">
           <v-card-title class="text-center">
-            <h3 class="text-h4 font-weight-bold">Trusted By</h3>
+            <h3 class="text-h4 font-weight-bold">
+              {{ $t("Partner.TrustedBy") }}
+            </h3>
           </v-card-title>
           <v-sheet color="transparent" class="d-flex justify-center">
             <v-card

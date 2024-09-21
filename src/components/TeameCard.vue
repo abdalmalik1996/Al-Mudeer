@@ -27,10 +27,13 @@
         </v-avatar>
       </div>
 
-      <div style="margin-top: 80px" class="d-flex  flex-column  justify-space-around  h-75">
+      <div
+        style="margin-top: 80px"
+        class="d-flex flex-column justify-space-around h-75"
+      >
         <v-card-title class="text-center"
           ><h5 style="font-size: 24px" class="font-weight-medium">
-            {{ team?.name }}
+            {{ $t(`Team.${team?.name}`) }}
           </h5></v-card-title
         >
         <v-card-subtitle
@@ -38,15 +41,15 @@
           style="opacity: 1 !important ; color: #a52a2a"
         >
           <p class="text-body-1 font-weight-medium text-capitalize">
-            {{ team?.posation }}
+            {{ $t(`Team.${team?.posation}`) }}
           </p>
         </v-card-subtitle>
         <v-card-subtitle class="text-center mt-1">
           <p class="text-wrap text-body-2 font-weight-medium">
-            "{{ team?.text }}"
+            " {{ $t(`Team.${team?.text}`) }}"
           </p>
         </v-card-subtitle>
-        <v-card-title variant="flat" class=" justify-self-end  w-100">
+        <v-card-title variant="flat" class="justify-self-end w-100">
           <a :href="team?.linkedin" target="_blank">
             <v-img :height="30" src="@/assets/icon/linkedin.svg"></v-img>
           </a>

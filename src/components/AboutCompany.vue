@@ -48,7 +48,10 @@
           </v-card>
         </v-col>
         <v-col class="d-flex align-center" cols="12" md="5">
-          <v-img src="@/assets/img/AboutCompany.png"></v-img>
+          <v-img
+            :style="current === 'ar' ? 'transform: scaleX(-1)' : ''"
+            src="@/assets/img/AboutCompany.png"
+          ></v-img>
         </v-col>
       </v-row>
     </v-card>
@@ -112,7 +115,7 @@
                       :style="mdAndUp ? 'width : 90%' : 'width : 100%'"
                       class="text-wrap text-center text-body-1 font-weight-medium"
                     >
-                      {{ item.title }}
+                      {{ $t(`Counter.${item.title}`) }}
                     </p>
                   </v-card-subtitle>
                 </v-card>
@@ -130,14 +133,15 @@
 import { useDisplay } from "vuetify";
 import Company from "@/components/Company.vue";
 import { watch, ref } from "vue";
-
+import { useLocale } from "vuetify";
 const { smAndUp, mdAndUp } = useDisplay();
+const { current } = useLocale();
 const isIntersecting = ref(false);
 const counter = ref(null);
 const show = ref(false);
 const itemsCounter = [
   {
-    title: "Value Of managed assets",
+    title: "CounterOne",
     number: 5.2,
     icon: "Value.svg",
     suffix: "B",
@@ -146,7 +150,7 @@ const itemsCounter = [
     decimals: "1",
   },
   {
-    title: "Employees Under Al-Mudeer Managment",
+    title: "CounterTwo",
     number: 400,
     prefix: "+ ",
     suffix: "",
@@ -155,7 +159,7 @@ const itemsCounter = [
     decimals: "0",
   },
   {
-    title: "Units Under Al-Mudeer Managment",
+    title: "CounterThree",
     number: 15,
     prefix: "+ ",
     suffix: " K",
@@ -164,7 +168,7 @@ const itemsCounter = [
     decimals: "0",
   },
   {
-    title: "AL-Mudeer Projects",
+    title: "CounterFour",
     number: 40,
     prefix: "+ ",
     suffix: "",

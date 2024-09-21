@@ -13,7 +13,8 @@
         <v-col cols="12" md="10">
           <v-card-title class="text-center">
             <h3 class="text-h4 font-weight-bold">
-              Let’s <span style="color: #a52a2a"> Connect </span>
+              {{ $t("Connect.Lets") }}
+              <span style="color: #a52a2a"> {{ $t("Connect.Connect") }} </span>
             </h3>
           </v-card-title>
 
@@ -30,7 +31,8 @@
             <v-col cols="12" md="6">
               <v-card-title class="pl-0 pb-3">
                 <h4 class="text-h4 font-weight-bold">
-                  Our Office <span style="color: #a52a2a">Info</span>
+                  {{ $t("Connect.OurOffice") }}
+                  <span style="color: #a52a2a">{{ $t("Connect.Info") }}</span>
                 </h4>
               </v-card-title>
               <v-list bg-color="transparent" style="height: auto !important">
@@ -45,11 +47,24 @@
                 >
                   <v-list-item-title>
                     <h4 class="text-body-1 font-weight-bold">
-                      {{ item.title }}
+                      {{ $t(`Connect.${item.title}`) }}
                     </h4>
                   </v-list-item-title>
                   <v-list-text>
-                    <p class="mt-1 text-body-2">{{ item.text }}</p>
+                    <p
+                      class="mt-1 text-body-2"
+                      v-if="item.type !== 'phoneNumber'"
+                    >
+                      {{ $t(`Connect.${item.text}`) }}
+                    </p>
+                    <p
+                      class="mt-1 text-body-2"
+                      v-if="item.type === 'phoneNumber'"
+                    >
+                      <span dir="ltr" lang="ar" style="direction: ltr">
+                        {{ $t(`Connect.${item.text}`) }}
+                      </span>
+                    </p>
                   </v-list-text>
                   <template v-slot:append>
                     <v-btn variant="text" icon="mdi-arrow-top-right"></v-btn>
@@ -114,29 +129,31 @@
               >
                 <v-form class="w-100">
                   <div class="mb-2 pl-1">
-                    <label class="text-h6 text-capitalize" for="full name"
-                      >full name</label
-                    >
+                    <label class="text-h6 text-capitalize" for="full name">
+                      {{ $t("Connect.fullName") }}
+                    </label>
                   </div>
                   <v-text-field variant="outlined" name="full name" />
                   <div class="mb-2 pl-1">
-                    <label class="text-h6 text-capitalize" for="full name"
-                      >email</label
-                    >
+                    <label class="text-h6 text-capitalize" for="full name">
+                      {{ $t("Connect.email") }}
+                    </label>
                   </div>
                   <v-text-field variant="outlined" name="email" />
                   <div class="mb-2 pl-1">
-                    <label class="text-h6 text-capitalize" for="full name"
-                      >Message</label
-                    >
+                    <label class="text-h6 text-capitalize" for="full name">{{
+                      $t("Connect.Message")
+                    }}</label>
                   </div>
                   <v-textarea
                     variant="outlined"
-                    placeholder="Type your message....."
+                    :placeholder="$t('Connect.Typeyourmessage')"
                     auto-grow
                     rows="5"
                   ></v-textarea>
-                  <v-btn block color="#a52a2a" size="large">Submit</v-btn>
+                  <v-btn block color="#a52a2a" size="large">{{
+                    $t("Connect.Submit")
+                  }}</v-btn>
                 </v-form>
               </v-card>
             </v-col>
@@ -152,23 +169,23 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 const items = [
   {
-    title: "You can email us here",
-    text: "info@almudeer.ae",
+    title: "ConnectOne",
+    text: "emailInfo",
     type: "email",
   },
   {
-    title: "Or just call us",
-    text: "+971 6 530 2080",
+    title: "ConnectTwo",
+    text: "phoneNumber",
     type: "phoneNumber",
   },
   {
-    title: "Location",
-    text: "UAE, Sharjah, Al Khan, Beach Tower 1, G-01",
+    title: "ConnectThree",
+    text: "location",
     type: "location",
   },
   {
-    title: "Business Hours",
-    text: "9:00 am - 6:00pm",
+    title: "ConnectFour",
+    text: "BusinessHours",
     type: "time",
   },
 ];

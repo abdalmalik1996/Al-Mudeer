@@ -27,7 +27,7 @@
           </template>
         </v-img>
         <v-card-title class="text-center">
-          <h5 class="text-h5">Excellence Award</h5>
+          <h5 class="text-h5">{{ $t("Certificate.ExcellenceAward") }}</h5>
         </v-card-title>
         <v-card-subtitle class="text-center">
           <p class="text-h6">{{ item.date }}</p>

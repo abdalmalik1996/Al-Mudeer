@@ -25,7 +25,9 @@
       <v-row class="ma-0" justify="center">
         <v-col cols="11">
           <v-card-title class="text-center">
-            <h4 class="text-h4 font-weight-bold">Our Departments</h4>
+            <h4 class="text-h4 font-weight-bold">
+              {{ $t("Departments.OurDepartments") }}
+            </h4>
           </v-card-title>
           <!-- <v-card-subtitle
             class="text-center mt-2"
@@ -70,29 +72,29 @@ const items = [
     imgBac: "/img/company/1.webp",
     img: "/1.webp",
     icon: "/img/company/OAM.png",
-    title: "OWNERS ASSOCIATION MANAGEMENT",
-    des: "Owners association management, including all technical, financial, and operational support in compliance with Jointly Owned Property Laws.",
+    title: "DepartmentsTitleOne",
+    des: "DepartmentsDesOne",
   },
   {
     imgBac: "/img/company/2.webp",
     img: "/2.png",
     icon: "/img/company/RE.png",
-    title: "REAL ESTATE",
-    des: "We at Al Mudeer Real Estate Company consider ourselves the best real estate experts for you We envision a world where everyone can find the perfect place. Your dream property is still waiting for you",
+    title: "DepartmentsTitleTwo",
+    des: "DepartmentsDesTwo",
   },
   {
     imgBac: "/img/company/3.webp",
     img: "/3.png",
     icon: "/img/company/PM.png",
-    title: "PROPERTY MANAGEMENT",
-    des: "Range of disciplines to ensure functionality, comfort, safety, and efficiency of the built environment by integrating people, place, process, and technology.",
+    title: "DepartmentsTitleThree",
+    des: "DepartmentsDesThree",
   },
   {
     imgBac: "/img/company/it-2.png",
     img: "/4.webp",
     icon: "/img/company/IT.png",
-    title: "IT SERVICES",
-    des: "ALMUDEER is a renowned mobile app development company & the best IT Software Solutions provider based in GCC established in 2020.",
+    title: "DepartmentsTitleFour",
+    des: "DepartmentsDesFour",
   },
 ];
 </script>

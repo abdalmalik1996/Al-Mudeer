@@ -9,7 +9,7 @@
       <v-row justify="center" class="ma-0">
         <v-col cols="11">
           <v-card-title class="text-center text-h4"
-            ><h4>The Executive Team</h4>
+            ><h4>{{ $t("Team.TheExecutiveTeam") }}</h4>
           </v-card-title>
           <!-- <v-card-subtitle class="text-center text-h5" style="opacity: 1">
             <p>
@@ -49,16 +49,16 @@ const teams = [
   },
   {
     img: "2.png",
-    name: "Mohammad Hani Dalleh",
-    posation: "General Manager",
-    text: "Do your work with your whole heart, and you will succeed - there's so little competition.",
+    name: "nameTwo",
+    posation: "GeneralManager",
+    text: "TextTwo",
     linkedin: "https://www.linkedin.com/in/mohammad-hani-dalleh-2b2a4a136/",
   },
   {
     img: "3.png",
-    name: "Hisham Bekhit",
-    posation: "owners association manager",
-    text: "Hard work beats talent when talent doesn't work hard.",
+    name: "nameThree",
+    posation: "ownersAssociationManager",
+    text: "TextThree",
     linkedin: "https://www.linkedin.com/in/hisham-bekhit-678a53224/",
   },
 ];

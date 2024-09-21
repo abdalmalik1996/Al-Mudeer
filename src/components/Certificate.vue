@@ -8,7 +8,9 @@
       <v-row justify="center" class="ma-0">
         <v-col cols="11">
           <v-card-title class="text-center">
-            <h3 class="text-h4 font-weight-bold">Certificate</h3>
+            <h3 class="text-h4 font-weight-bold">
+              {{ $t("Certificate.Certificate") }}
+            </h3>
           </v-card-title>
           <v-card-subtitle
             class="w-100 d-flex justify-center"
@@ -18,9 +20,7 @@
               class="text-h6 text-wrap text-center"
               :style="mdAndUp ? 'width : 50%' : 'width : 100%'"
             >
-              With experience spanning more than 14 years, we are proud to share
-              with you certificates that distinguish us as the best company in
-              Sharjah for more than 8 consecutive years without dispute.
+              {{ $t("Certificate.CertificateSubtitle") }}
             </p>
           </v-card-subtitle>
           <v-sheet color="transparent" class="py-5 position-relative">
@@ -68,6 +68,8 @@
 import CertificateCard from "./CertificateCard.vue";
 import { useDisplay } from "vuetify";
 import { ref } from "vue";
+import { useLocale } from "vuetify";
+const { current } = useLocale();
 const swiperRef = ref(null);
 const { smAndUp, mdAndUp } = useDisplay();
 const itemsCertificate = [
@@ -80,10 +82,18 @@ const itemsCertificate = [
 ];
 
 function next() {
-  swiperRef.value.swiper.slideNext();
+  if (current.value === "en") {
+    swiperRef.value.swiper.slideNext();
+  } else {
+    swiperRef.value.swiper.slidePrev();
+  }
 }
 function prev() {
-  swiperRef.value.swiper.slidePrev();
+  if (current.value === "en") {
+    swiperRef.value.swiper.slidePrev();
+  } else {
+    swiperRef.value.swiper.slideNext();
+  }
 }
 </script>
 

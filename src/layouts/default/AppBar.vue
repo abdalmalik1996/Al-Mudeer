@@ -89,7 +89,7 @@ const router = useRouter();
 function changeLang(lang) {
   locale.value = lang;
   globalStore.changeCurrentLocale(lang);
-  // router.go();
+  router.go();
 }
 const items = [
   {

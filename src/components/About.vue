@@ -10,11 +10,11 @@
           <v-card variant="flat" color="transparent" class="py-9">
             <v-card-title class="text-center py-md-15 py-5">
               <h4 class="text-h4 text-white font-weight-bold">
-                About Company
+                {{ $t("About.AboutCompany") }}
               </h4>
             </v-card-title>
             <v-row class="ma-0">
-              <v-col cols="12" md="6" >
+              <v-col cols="12" md="6">
                 <v-card
                   v-for="(item, index) in items"
                   :key="index"
@@ -26,14 +26,22 @@
                       {{ item.title }}
                     </h5>
                   </v-card-title> -->
-                  <v-card-subtitle style="opacity: 1" class="text-wrap" :style="mdAndUp ? 'width : 75%' : 'width : 100%'">
-                    <p style="font-size: 18px;" class=" font-weight-regular">
-                      {{ item.content }}
+                  <v-card-subtitle
+                    style="opacity: 1"
+                    class="text-wrap"
+                    :style="mdAndUp ? 'width : 75%' : 'width : 100%'"
+                  >
+                    <p style="font-size: 18px" class="font-weight-regular">
+                      {{ $t(`About.${item.content}`) }}
                     </p>
                   </v-card-subtitle>
                 </v-card>
               </v-col>
-              <v-col cols="12" md="6" class="d-flex justify-center align-center">
+              <v-col
+                cols="12"
+                md="6"
+                class="d-flex justify-center align-center"
+              >
                 <v-img :height="250" src="@/assets/icon/logo-almudeer.svg">
                 </v-img>
               </v-col>
@@ -49,20 +57,17 @@
 const items = [
   {
     title: "Where does it come from",
-    content:
-      "The first owner’s association management company in Sharjah with an experience difference that is the largest in the market due to our absolute seniority over all companies.",
+    content: "AboutContentOne",
     icon: "",
   },
   {
     title: "Where does it come from",
-    content:
-      "The perfect mix of services provided by our company is considered the greatest challenge for any competitor, as the company’s branches provide real estate services, property management, and even the management of owners’ associations and building developers, in addition to providing software that helps in following up on all of the previous at the same time. ",
+    content: "AboutContentTwo",
     icon: "",
   },
   {
     title: "Where does it come from",
-    content:
-      "The accreditation of our company by government agencies and their reliance on us will always remain one of our greatest points of pride and the emergence of our strength and our serious presence in major projects that demonstrate how proud we are of our pivotal role in the United Arab Emirates.",
+    content: "AboutContentThree",
     icon: "",
   },
 ];
