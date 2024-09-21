@@ -3,12 +3,12 @@
     <Introdacution />
     <AboutCompany />
     <Teame />
-    <Projects id="Projects" />
+    <Projects id="projects" />
     <Application />
-    <About id="About" />
+    <About id="about-Us" />
     <Certificate />
     <Partner />
-    <Connect id="CotactUs" />
+    <Connect id="cotact-us" />
   </v-sheet>
 </template>
 
@@ -22,5 +22,4 @@ import AboutCompany from "@/components/AboutCompany.vue";
 import Partner from "@/components/Partner.vue";
 import Connect from "@/components/Connect.vue";
 import Certificate from "@/components/Certificate.vue";
-
 </script>

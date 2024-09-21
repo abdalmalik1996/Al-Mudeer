@@ -14,41 +14,35 @@
         <v-col cols="12" md="6" class="d-flex align-center">
           <v-card variant="text">
             <v-card-title class="py-5">
-              <h4 class="text-h4 font-weight-bold">Who’s Al Mudeer</h4>
+              <h4 class="text-h4 font-weight-bold">
+                {{ $t("AboutCompany.WhosAlMudeer") }}
+              </h4>
             </v-card-title>
             <v-card-subtitle class="text-wrap" style="opacity: 1">
               <p class="text-body-1 font-weight-light mb-7">
-                <span class="text-h6 text-white font-weight-bold"
+                <span
+                  v-if="current === 'en'"
+                  class="text-h6 text-white font-weight-bold"
                   >Al Mudeer Company </span
-                >was established in 2011 to provide exceptional administrative
-                services to owners’ associations. Since its inception, it has
-                been one of the most prominent real estate companies in Sharjah,
-                with a journey full of achievements. After entering the
-                technology sector, it began developing its own software
-                services, which led to raising the company’s position at the
-                state level and making it an integrated group of competencies,
-                achievements and capabilities that have been at the forefront of
-                real estate excellence without dispute for seven consecutive
-                years in Sharjah.
+                >{{ $t("AboutCompany.itemOne") }}
               </p>
               <p class="text-body-1 font-weight-light mb-7">
-                <span class="text-h6 text-white font-weight-bold">
+                <span
+                  v-if="current === 'en'"
+                  class="text-h6 text-white font-weight-bold"
+                >
                   Al Mudeer
                 </span>
-                currently manages over 42 active projects in the UAE and has
-                over 15,000 real estate units in prominent towers and premium
-                buildings. Since then, the company has successfully managed a
-                wide range of projects and consistently exceeded client
-                expectations.
+                {{ $t("AboutCompany.itemTwo") }}
               </p>
               <p class="text-body-1 font-weight-light mb-7">
-                <span class="text-h6 text-white font-weight-bold">
+                <span
+                  v-if="current === 'en'"
+                  class="text-h6 text-white font-weight-bold"
+                >
                   Our extensive experience,
                 </span>
-                in-depth market knowledge and the breadth of our operations make
-                us the only entity able to guarantee a cost-effective service,
-                results and approach superior to all our competitors in the
-                managed communities sector.
+                {{ $t("AboutCompany.itemThree") }}
               </p>
             </v-card-subtitle>
           </v-card>
@@ -130,7 +124,6 @@
     </v-card>
     <Company />
   </v-sheet>
-
 </template>
 
 <script setup>

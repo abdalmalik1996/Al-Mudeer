@@ -42,9 +42,9 @@ import TeameCard from "./TeameCard.vue";
 const teams = [
   {
     img: "1.png",
-    name: "Feras Al Helo",
+    name: "nameOne",
     posation: "CEO",
-    text: "Patience, persistence and perspiration make an unbeatable combination for success.",
+    text: "TextOne",
     linkedin: "https://www.linkedin.com/in/feras-alhelo-8458bba2/",
   },
   {

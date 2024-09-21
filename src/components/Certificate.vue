@@ -14,20 +14,23 @@
             class="w-100 d-flex justify-center"
             style="opacity: 1"
           >
-            <p class="text-h6 text-wrap  text-center" :style="mdAndUp ? 'width : 50%' : 'width : 100%'">
+            <p
+              class="text-h6 text-wrap text-center"
+              :style="mdAndUp ? 'width : 50%' : 'width : 100%'"
+            >
               With experience spanning more than 14 years, we are proud to share
               with you certificates that distinguish us as the best company in
               Sharjah for more than 8 consecutive years without dispute.
             </p>
           </v-card-subtitle>
           <v-sheet color="transparent" class="py-5 position-relative">
-            <!-- <v-btn
+            <v-btn
               @click="prev"
               variant="text"
               class="text-h4"
               icon="mdi-chevron-left"
               size="x-large"
-              style="position: absolute; left: -70px; top: 50%; z-index: 999;"
+              style="position: absolute; left: -70px; top: 50%; z-index: 999"
             ></v-btn>
             <v-btn
               @click="next"
@@ -35,15 +38,15 @@
               class="text-h4"
               icon="mdi-chevron-right"
               size="x-large"
-              style="position: absolute; right: -70px; top: 50%; z-index: 999;"
-            ></v-btn> -->
+              style="position: absolute; right: -70px; top: 50%; z-index: 999"
+            ></v-btn>
             <swiper-container
               id="swiper_container"
               class="mt-10 d-flex align-center justify-center"
               :slides-per-view="mdAndUp ? 5 : 'auto'"
               :space-between="20"
               @swiper="onSwiper"
-              navigation="true"
+              ref="swiperRef"
             >
               <swiper-slide
                 v-for="(item, index) in itemsCertificate"
@@ -65,7 +68,7 @@
 import CertificateCard from "./CertificateCard.vue";
 import { useDisplay } from "vuetify";
 import { ref } from "vue";
-
+const swiperRef = ref(null);
 const { smAndUp, mdAndUp } = useDisplay();
 const itemsCertificate = [
   { img: 3, date: "2020" },
@@ -76,12 +79,12 @@ const itemsCertificate = [
   { img: 8, date: "2023" },
 ];
 
-// function next() {
-//   swiperContainer.swiper.slideNext();
-// }
-// function prev() {
-//     swiperContainer.swiper.slidePrev();
-// }
+function next() {
+  swiperRef.value.swiper.slideNext();
+}
+function prev() {
+  swiperRef.value.swiper.slidePrev();
+}
 </script>
 
 <style scoped>
