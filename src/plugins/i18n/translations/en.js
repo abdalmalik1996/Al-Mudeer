@@ -81,7 +81,7 @@ export default {
       "Resident can log complaint choosing category, sub-category, type, etc. Residents can provide description and attach photos of issues.",
   },
   Projects: {
-    OurProjects: "OurProjects",
+    OurProjects: "Our Projects",
   },
   About: {
     AboutCompany: "About Company",

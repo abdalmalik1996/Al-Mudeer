@@ -1,14 +1,12 @@
-/**
- * src/styles/settings.scss
- *
- * Configures SASS variables and Vuetify overwrites
- */
+$font-en: "Roboto", sans-serif;
+$font-ar: "Tajawal", sans-serif;
 
-// @use "vuetify/settings" with (
-
-// );
-
-$font-family-custom: "inherit", sans-serif;
+// Forward Vuetify settings with a dynamic CSS variable for the body font family
 @forward "vuetify/settings" with (
-  $body-font-family: $font-family-custom !default
+  $body-font-family: var(--v-body-font-family, #{$font-en}) !default
 );
+
+// Set default values for CSS variables in the :root selector
+:root {
+  --v-body-font-family: #{$font-en}; // Default to English font
+}

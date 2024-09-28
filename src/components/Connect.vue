@@ -55,8 +55,9 @@
                       class="mt-1 text-body-2"
                       v-if="item.type !== 'phoneNumber'"
                     >
-                      {{ $t(`Connect.${item.text}`) }}
+                      {{ $t("Connect." + item.text) }}
                     </p>
+
                     <p
                       class="mt-1 text-body-2"
                       v-if="item.type === 'phoneNumber'"
