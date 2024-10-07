@@ -1,14 +1,6 @@
 <template>
   <v-card color="transparent" lass="rounded-0">
-    <v-card
-      class="py-5 text-white rounded-0"
-      :style="
-        mdAndUp
-          ? 'padding-top: 150px !important '
-          : 'padding-top: 320px !important'
-      "
-      color="transparent"
-    >
+    <v-card class="py-5 text-white rounded-0" color="transparent">
       <!-- style="
         background: linear-gradient(
             180deg,

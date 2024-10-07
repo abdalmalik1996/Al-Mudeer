@@ -53,11 +53,20 @@
                   <v-list-text>
                     <p
                       class="mt-1 text-body-2"
-                      v-if="item.type !== 'phoneNumber'"
+                      v-if="
+                        item.type !== 'phoneNumber' && item.type !== 'email'
+                      "
                     >
                       {{ $t("Connect." + item.text) }}
                     </p>
-
+                    <p
+                      class="mt-1 text-body-2"
+                      v-if="
+                        item.type !== 'phoneNumber' && item.type === 'email'
+                      "
+                    >
+                      {{ item.text }}
+                    </p>
                     <p
                       class="mt-1 text-body-2"
                       v-if="item.type === 'phoneNumber'"
@@ -68,7 +77,34 @@
                     </p>
                   </v-list-text>
                   <template v-slot:append>
-                    <v-btn variant="text" icon="mdi-arrow-top-right"></v-btn>
+                    <!-- <v-btn
+                      v-if="item.type !== 'time'"
+                      variant="text"
+                      icon="mdi-arrow-top-right"
+                    ></v-btn> -->
+                    <v-btn
+                      v-if="item.type === 'email'"
+                      :href="`mailto:${$t(`Connect.${item.text}`)}`"
+                      variant="text"
+                      icon="mdi-arrow-top-right"
+                      target="_blank"
+                    ></v-btn>
+
+                    <v-btn
+                      v-if="item.type === 'phoneNumber'"
+                      :href="`tel:${$t(`Connect.${item.text}`)}`"
+                      variant="text"
+                      icon="mdi-arrow-top-right"
+                    ></v-btn>
+                    <v-btn
+                      v-if="item.type === 'location'"
+                      :href="`https://www.google.com/maps/search/?api=1&query=${$t(
+                        `Connect.${item.text}`
+                      )}`"
+                      variant="text"
+                      icon="mdi-arrow-top-right"
+                      target="_blank"
+                    ></v-btn>
                   </template>
                 </v-list-item>
               </v-list>
@@ -121,7 +157,7 @@
                 </p>
               </v-card-text> -->
             </v-col>
-            <v-col cols="12" md="4">
+            <!-- <v-col cols="12" md="4">
               <v-card
                 class="pa-5 w-100 h-100 text-white d-flex align-center"
                 style="background-color: rgba(255, 255, 255, 0.1)"
@@ -157,7 +193,7 @@
                   }}</v-btn>
                 </v-form>
               </v-card>
-            </v-col>
+            </v-col> -->
           </v-row>
         </v-col>
       </v-row>
@@ -171,7 +207,7 @@ import "aos/dist/aos.css";
 const items = [
   {
     title: "ConnectOne",
-    text: "emailInfo",
+    text: "info@almudeer.ae",
     type: "email",
   },
   {

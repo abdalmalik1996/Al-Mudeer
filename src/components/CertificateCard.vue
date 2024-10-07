@@ -4,7 +4,7 @@
       <v-card
         variant="flat"
         color="#303c4359"
-        class="pa-5 text-white d-flex flex-column align-center rounded-xl cursor-pointer"
+        class="pa-3 pa-lg-5 text-white d-flex flex-column align-center rounded-xl cursor-pointer"
         width="300"
         height="350"
         v-bind="props"

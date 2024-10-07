@@ -24,39 +24,61 @@
             </p>
           </v-card-subtitle>
           <v-sheet color="transparent" class="py-5 position-relative">
-            <v-btn
-              @click="prev"
-              variant="text"
-              class="text-h4"
-              icon="mdi-chevron-left"
-              size="x-large"
-              style="position: absolute; left: -70px; top: 50%; z-index: 999"
-            ></v-btn>
-            <v-btn
-              @click="next"
-              variant="text"
-              class="text-h4"
-              icon="mdi-chevron-right"
-              size="x-large"
-              style="position: absolute; right: -70px; top: 50%; z-index: 999"
-            ></v-btn>
+            <div v-if="mdAndUp">
+              <v-btn
+                @click="prev"
+                variant="text"
+                class="text-h4"
+                icon="mdi-chevron-left"
+                size="x-large"
+                style="position: absolute; left: -70px; top: 50%; z-index: 999"
+              ></v-btn>
+              <v-btn
+                @click="next"
+                variant="text"
+                class="text-h4"
+                icon="mdi-chevron-right"
+                size="x-large"
+                style="position: absolute; right: -70px; top: 50%; z-index: 999"
+              ></v-btn>
+            </div>
+
             <swiper-container
               id="swiper_container"
               class="mt-10 d-flex align-center justify-center"
-              :slides-per-view="mdAndUp ? 5 : 'auto'"
+              :slides-per-view="slidesPerView"
               :space-between="20"
               @swiper="onSwiper"
               ref="swiperRef"
+              navigation="false"
             >
               <swiper-slide
                 v-for="(item, index) in itemsCertificate"
                 :key="index"
-                :style="smAndUp ? 'width: 345px' : '50%'"
+                :style="mdAndUp ? 'width: 345px' : 'width: 100%'"
                 class="d-flex justify-center"
               >
                 <CertificateCard :item="item" />
               </swiper-slide>
             </swiper-container>
+            <div v-if="!mdAndUp" class="d-flex justify-center mt-5 ga-3">
+              <v-btn
+                @click="prev"
+                variant="text"
+                class="text-h4"
+                icon="mdi-chevron-left"
+                size="x-large"
+                style="z-index: 999"
+              ></v-btn>
+              <v-btn
+                @click="next"
+                variant="text"
+                class="text-h4"
+                icon="mdi-chevron-right"
+                size="x-large"
+                style="z-index: 999"
+              ></v-btn>
+            </div>
           </v-sheet>
         </v-col>
       </v-row>
@@ -69,9 +91,11 @@ import CertificateCard from "./CertificateCard.vue";
 import { useDisplay } from "vuetify";
 import { ref } from "vue";
 import { useLocale } from "vuetify";
+import { computed } from "vue";
+
 const { current } = useLocale();
 const swiperRef = ref(null);
-const { smAndUp, mdAndUp } = useDisplay();
+const { smAndUp, mdAndUp, lgAndUp } = useDisplay();
 const itemsCertificate = [
   { img: 3, date: "2020" },
   { img: 4, date: "2013" },
@@ -95,12 +119,23 @@ function prev() {
     swiperRef.value.swiper.slideNext();
   }
 }
+const slidesPerView = computed(() => {
+  if (lgAndUp.value) {
+    return 5; // عند الشاشات الكبيرة جدًا (lg وما فوق
+  } else if (mdAndUp.value) {
+    return 4; // عند الشاشات المتوسطة (md وما فوق)
+  } else if (smAndUp.value) {
+    return 3; // عند الشاشات الصغيرة (sm وما فوق)
+  } else {
+    return "auto"; // في الشاشات الأصغر من ذلك
+  }
+});
 </script>
 
 <style scoped>
 swiper-container::part(button-prev),
 swiper-container::part(button-next) {
   color: #dedede !important;
-  /* display: none */
+  display: none;
 }
 </style>

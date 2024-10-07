@@ -22,13 +22,32 @@
         <p class="text-body-1">{{ $t("Partner.StrategicPartners") }}</p>
       </v-card-subtitle>
       <v-row justify="center">
-        <v-col cols="12">
-          <v-sheet color="transparent">
+        <v-col cols="11">
+          <v-sheet color="transparent" class="position-relative">
+            <div v-if="mdAndUp" class="bg-red w-100">
+              <v-btn
+                @click="prev"
+                variant="text"
+                class="text-h4"
+                icon="mdi-chevron-left"
+                size="x-large"
+                style="position: absolute; left: -50px; top: 50%; z-index: 999"
+              ></v-btn>
+              <v-btn
+                @click="next"
+                variant="text"
+                class="text-h4"
+                icon="mdi-chevron-right"
+                size="x-large"
+                style="position: absolute; right: -50px; top: 50%; z-index: 999"
+              ></v-btn>
+            </div>
             <swiper-container
               class="mt-2 d-flex align-center justify-center"
               :slides-per-view="mdAndUp ? 5 : 'auto'"
               :spaceBetween="20"
-              navigation="true"
+              :navigation="false"
+              ref="swiperRef"
             >
               <swiper-slide
                 v-for="n in 8"
@@ -49,20 +68,40 @@
                         style="transition: 1s"
                         :height="180"
                         :src="`/img/Partner/${n}.png`"
+                        class="img_Partner"
                       ></v-img> </v-card
                   ></template>
                 </v-hover>
               </swiper-slide>
             </swiper-container>
+            <div v-if="!mdAndUp" class="d-flex justify-center ga-3">
+              <v-btn
+                @click="prev"
+                variant="text"
+                class="text-h5 mt-n8"
+                icon="mdi-chevron-left"
+                size="x-small"
+                style="z-index: 999"
+              ></v-btn>
+              <v-btn
+                @click="next"
+                variant="text"
+                class="text-h5 mt-n8"
+                icon="mdi-chevron-right"
+                size="x-small"
+                style="z-index: 999"
+              ></v-btn>
+            </div>
           </v-sheet>
         </v-col>
+
         <v-col cols="10">
           <v-card-title class="text-center">
             <h3 class="text-h4 font-weight-bold">
               {{ $t("Partner.TrustedBy") }}
             </h3>
           </v-card-title>
-          <v-sheet color="transparent" class="d-flex justify-center">
+          <v-sheet color="transparent" class="d-flex justify-center flex-wrap">
             <v-card
               class="pa-5"
               width="200"
@@ -96,13 +135,35 @@
 </template>
 
 <script setup>
-import { useDisplay } from "vuetify";
+import { ref } from "vue";
+import { useDisplay, useLocale } from "vuetify";
 const { smAndUp, mdAndUp } = useDisplay();
+const { current } = useLocale();
+const swiperRef = ref(null);
+function next() {
+  if (current.value === "en") {
+    swiperRef.value.swiper.slideNext();
+  } else {
+    swiperRef.value.swiper.slidePrev();
+  }
+}
+function prev() {
+  if (current.value === "en") {
+    swiperRef.value.swiper.slidePrev();
+  } else {
+    swiperRef.value.swiper.slideNext();
+  }
+}
 </script>
 
 <style scoped>
 swiper-container::part(button-prev),
 swiper-container::part(button-next) {
   color: #dede !important;
+}
+</style>
+<style>
+.img_Partner .v-img__img {
+  object-position: bottom !important;
 }
 </style>

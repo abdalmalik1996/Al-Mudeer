@@ -99,7 +99,7 @@ export default {
   Partner: {
     OurPartner: "شركاؤنا",
     StrategicPartners: "شركاء استراتيجيون",
-    TrustedBy: "موثوق به من قبل",
+    TrustedBy: "نحن موثوقين من قبل",
   },
   Connect: {
     Lets: "دعنا ",

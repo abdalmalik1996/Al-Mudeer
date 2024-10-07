@@ -1,24 +1,19 @@
 <template>
-  <v-sheet height="100vh" min-height="100vh">
+  <v-sheet :height="mdAndUp ? '100vh' : '80vh'">
     <v-card
       class="position-relative pa-0 h-100 d-flex align-end rounded-0 card-img"
       image="@/assets/img/back-sky.png"
     >
       <div
-        style="
-          position: absolute;
-          top: 15vh;
-          left: 0px;
-          z-index: -1;
-          width: 100%;
-        "
+        style="position: absolute; left: 0px; z-index: -1; width: 100%"
         class="d-flex justify-center"
         data-aos="fade-up"
         data-aos-duration="3000"
+        :style="mdAndUp ? 'top: 15vh' : 'top: 30vh;'"
       >
         <v-img
           width="100%"
-          height="35vh"
+          :height="mdAndUp ? '35vh' : '20vw'"
           src="@/assets/icon/logo-group.svg"
         ></v-img>
         <!-- src="/img/almudeer_white-word.png" -->
@@ -58,6 +53,8 @@
 import Aos from "aos";
 import "aos/dist/aos.css";
 Aos.init();
+import { useDisplay } from "vuetify";
+const { mdAndUp } = useDisplay();
 </script>
 
 <style>

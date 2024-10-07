@@ -1,15 +1,6 @@
 <template>
-  <v-sheet
-    color="transparent"
-    class="position-relative rounded-0"
-    :style="{ height: calculatedHeight }"
-  >
-    <v-card
-      color="#090F13"
-      min-height="100vh"
-      class="text-white rounded-0"
-      :style="mdAndUp ? 'padding-bottom: 200px' : 'padding-bottom: 320px'"
-    >
+  <v-sheet color="transparent" class="position-relative rounded-0">
+    <v-card color="#090F13" min-height="100vh" class="text-white rounded-0">
       <v-row justify="end" class="ma-0">
         <v-col cols="12" md="6" class="d-flex align-center">
           <v-card variant="text">
@@ -56,72 +47,71 @@
       </v-row>
     </v-card>
 
-    <v-card
-      variant="flat"
-      color="transparent"
-      class="pa-0 w-100 rounded-0"
-      style="transform: translateY(-50%); z-index: 9999; position: absolute"
-    >
+    <v-card variant="text" color="transparent" class="pa-0 w-100 rounded-0">
       <v-row justify="center" class="ma-0 pa-0 w-100">
-        <v-col cols="11" class="py-0">
-          <v-sheet
-            class="rounded-xl d-flex justify-lg-space-between align-center py-5"
-            color="#1A2226"
-            variant="flat"
-          >
-            <v-row class="ma-0">
-              <v-col
-                cols="12"
-                sm="6"
-                md="3"
-                v-for="(item, index) in itemsCounter"
-                :key="index"
-                v-intersect="{
-                  handler: onIntersect,
-                  options: {
-                    threshold: [0, 0.5, 1.0],
-                  },
-                }"
+        <v-col cols="12" class="py-0 bg_bac">
+          <v-row class="ma-0">
+            <v-col>
+              <v-sheet
+                class="rounded-xl d-flex justify-lg-space-between align-center py-5"
+                color="#1A2226"
+                variant="flat"
               >
-                <v-card
-                  variant="text"
-                  class="text-white text-center d-flex flex-column align-center"
-                >
-                  <v-img
-                    width="85"
-                    :height="85"
-                    :src="`/icon/${item.icon}`"
-                  ></v-img>
-                  <v-card-title>
-                    <h5 class="text-h4 text-md-h4 font-weight-bold">
-                      <vue3-autocounter
-                        ref="counter"
-                        :startAmount="0"
-                        :endAmount="item.number"
-                        :duration="4"
-                        :prefix="item.prefix"
-                        :suffix="item.suffix"
-                        :decimals="item.decimals"
-                        :decimalSeparator="item.decimalSeparator"
-                        :autoinit="false"
-                      />
-                    </h5>
-                  </v-card-title>
-                  <v-card-subtitle
-                    class="d-flex justify-center"
-                    style="opacity: 1"
+                <v-row class="ma-0">
+                  <v-col
+                    cols="12"
+                    sm="6"
+                    md="3"
+                    v-for="(item, index) in itemsCounter"
+                    :key="index"
+                    v-intersect="{
+                      handler: onIntersect,
+                      options: {
+                        threshold: [0, 0.5, 1.0],
+                      },
+                    }"
                   >
-                    <p
-                      :style="mdAndUp ? 'width : 90%' : 'width : 100%'"
-                      class="text-wrap text-center text-body-1 font-weight-medium"
+                    <v-card
+                      variant="text"
+                      class="text-white text-center d-flex flex-column align-center"
                     >
-                      {{ $t(`Counter.${item.title}`) }}
-                    </p>
-                  </v-card-subtitle>
-                </v-card>
-              </v-col>
-            </v-row>
-          </v-sheet>
+                      <v-img
+                        width="85"
+                        :height="85"
+                        :src="`/icon/${item.icon}`"
+                      ></v-img>
+                      <v-card-title>
+                        <h5 class="text-h4 text-md-h4 font-weight-bold">
+                          <vue3-autocounter
+                            ref="counter"
+                            :startAmount="0"
+                            :endAmount="item.number"
+                            :duration="4"
+                            :prefix="item.prefix"
+                            :suffix="item.suffix"
+                            :decimals="item.decimals"
+                            :decimalSeparator="item.decimalSeparator"
+                            :autoinit="false"
+                          />
+                        </h5>
+                      </v-card-title>
+                      <v-card-subtitle
+                        class="d-flex justify-center"
+                        style="opacity: 1"
+                      >
+                        <p
+                          :style="mdAndUp ? 'width : 90%' : 'width : 100%'"
+                          class="text-wrap text-center text-body-1 font-weight-medium"
+                        >
+                          {{ $t(`Counter.${item.title}`) }}
+                        </p>
+                      </v-card-subtitle>
+                    </v-card>
+                  </v-col>
+                </v-row>
+              </v-sheet>
+            </v-col>
+          </v-row>
         </v-col>
       </v-row>
     </v-card>
@@ -194,4 +184,8 @@ watch(
 );
 </script>
 
-<style scoped></style>
+<style scoped>
+.bg_bac {
+  background: linear-gradient(to bottom, #090f13 50%, transparent 50%);
+}
+</style>

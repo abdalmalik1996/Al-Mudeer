@@ -1,14 +1,14 @@
 <template>
   <v-card class="rounded-0" color="transparent">
-    <v-card
-      class="py-5 pb-0 text-white rounded-0 d-flex align-center justify-center"
-      min-height="100vh"
+    <v-sheet
+      class="py-5 pb-0 text-white rounded-0"
+      min-height="80vh"
       style="background: rgba(48, 60, 67, 0.6)"
     >
       <!-- style="background: rgba(48, 60, 67, 0.6)" -->
 
       <v-row class="ma-0" justify="center">
-        <v-col sm="9" cols="12" class="pb-0">
+        <v-col md="11" cols="11" class="pb-0">
           <v-card-title class="text-center">
             <h4 class="text-h4 font-weight-bold">
               {{ $t("Projects.OurProjects") }}
@@ -20,16 +20,16 @@
               It has
             </p>
           </v-card-subtitle> -->
-          <v-sheet color="transparent" class="ga-10">
+          <v-sheet color="transparent">
             <swiper-container
               class="mt-5 d-flex align-end justify-center"
-              slides-per-view="auto"
+              :slides-per-view="slidesPerView"
               :space-between="20"
             >
               <swiper-slide
                 v-for="(item, index) in items"
                 :key="index"
-                :style="smAndUp ? 'width : 250px' : 'width :80%'"
+                :style="mdAndUp ? 'width : 250px' : 'width :100%'"
                 class="d-flex justify-center"
               >
                 <v-card
@@ -45,13 +45,15 @@
           </v-sheet>
         </v-col>
       </v-row>
-    </v-card>
+    </v-sheet>
   </v-card>
 </template>
 
 <script setup>
+import { computed } from "vue";
 import { useDisplay } from "vuetify";
-const { smAndUp, mdAndUp } = useDisplay();
+const { smAndUp, mdAndUp, lgAndUp } = useDisplay();
+
 import ProjectsCard from "./ProjectsCard.vue";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -86,6 +88,17 @@ const items = [
     title: "sahara tower 1",
   },
 ];
+const slidesPerView = computed(() => {
+  if (lgAndUp.value) {
+    return 5; // عند الشاشات الكبيرة جدًا (lg وما فوق
+  } else if (mdAndUp.value) {
+    return 4; // عند الشاشات المتوسطة (md وما فوق)
+  } else if (smAndUp.value) {
+    return 3; // عند الشاشات الصغيرة (sm وما فوق)
+  } else {
+    return "auto"; // في الشاشات الأصغر من ذلك
+  }
+});
 </script>
 
 <style scoped></style>
